@@ -1,6 +1,6 @@
 ---
-name: Newsletter email registration
-about: Enable registration to receive a newsletter from the website.
+name: Svartklubben FM Issue Template
+about: About Svartklubben FM Issue Template
 title: ''
 labels: ''
 assignees: luddehs
