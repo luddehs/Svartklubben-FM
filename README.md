@@ -63,6 +63,42 @@ The live link can be found here - []()
 
 #### Wireframes
 
+<details>
+
+ <summary>Landing Page</summary>
+
+![Landing Page](docs/wireframes/landingpage-wf.png)
+</details>
+
+<details>
+
+<summary>About Page</summary>
+
+![About Page](docs/wireframes/about-wr.png)
+</details>
+
+
+<details>
+
+<details>
+
+<summary>Register</summary>
+
+![Register](docs/wireframes/register-wr.png)
+</details>
+
+<summary>Sign In</summary>
+
+![Sign In](docs/wireframes/signin-wr.png)
+</details>
+
+<details>
+
+<summary>Account / Post</summary>
+
+![Account / Post](docs/wireframes/account-post-wr.png)
+</details>
+
 ## Agile Methodology
 
 ## Data Model
@@ -83,7 +119,6 @@ The live link can be found here - []()
 
 ### Header
 
-![header](docs/readme_images/features/nav_loggedout.png)
 
 **Logo**
 
