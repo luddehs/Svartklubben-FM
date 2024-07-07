@@ -9,10 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
-
 .thin {
     font-weight: 300;
 }
@@ -27,6 +23,14 @@ body {
 
 .main-bg {
     background-color: #F9FAFC;
+}
+
+.navbar-text-red {
+    color: red;
+}
+
+.navbar-text-green {
+    color: green;
 }
 
 .card {
