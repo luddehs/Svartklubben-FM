@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['8000-luddehs-svartklubbenfm-7u2dvrckih4.ws.codeinstitute-ide.n
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
