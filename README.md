@@ -117,6 +117,10 @@ The following user stories were labeled as "Won't Have" on the GitHub project bo
 
 ## Agile Methodology
 
+GitHub Projects was used to manage the development process with an agile approach. Please see the project board [here](https://github.com/users/luddehs/projects/2)
+
+The four Epics listed above were documented as Milestones within the GitHub project. A GitHub Issue was created for each User Story and allocated to a corresponding Milestone (Epic). Each User Story includes defined acceptance criteria to clarify when the User Story is complete. The acceptance criteria are further broken down into tasks to facilitate the execution of the User Story.
+
 ## Data Model
 
 ## Testing
@@ -124,6 +128,9 @@ The following user stories were labeled as "Won't Have" on the GitHub project bo
 ## Security Features and Defensive Design
 
 ### User Authentication
+
+- Django's LoginRequiredMixin ensures that any requests to access secure pages by non-authenticated users are redirected to the login page. This guarantees that only logged-in users can access these pages.
+- Django's UserPassesTestMixin restricts access based on specific permissions. It ensures that users can only edit or delete recipes and comments that they have authored. If a user fails the permission test, they receive an HTTP 403 Forbidden error.
 
 ### Form Validation 
 
