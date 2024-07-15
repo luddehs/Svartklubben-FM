@@ -40,18 +40,34 @@ The live link can be found here - []()
 
 ## User Experience (UX)
 
+A visitor to Svartklubben FM is most likely an adult and a music enthusiast, although curiosity for music knows no age limit. They enjoy discovering music across various genres, appreciate reading blog posts about music and receiving curated playlists that fit their daily soundtrack.
+
+
 ### User Stories
 
 #### EPIC | Site Administration
-- As a Site Administrator, I can create, read, update and delete content, so that I can manage the app content.
+- As a site administrator I can manage items by creating, viewing, editing, and deleting them so that I can control the content on the website.
+- As a site administrator I can sign in using a secure authentication method so that I can access the admin dashboard and manage the site effectively.
+- As a site administrator I can remain signed in across different pages until I choose to sign out or my session expires so that I can manage the site efficiently without needing to sign in repeatedly.
 
 #### EPIC | User Navigation
-- As a Site User,
+- As a site user I can naturally navigate around the site so that I can easily find the content I am looking for.
+- As a site user I can view blog posts containing various content formats so that I can easily discover and listen to curated music selections.
 
-#### EPIC | Newsletter
-- As a Site User,
+#### EPIC | Content Management
+- As a site user I can visit the about page to better understand the story and purpose of the site so that I feel a connection and trust in the content provided.
+
+#### EPIC | User Interaction
+- As a site user I can register and login to access the polls so that I can interact with the site creators and leave feedback by answering questions about the content of the site.
 
 #### User stories not yet implemented
+
+The following user stories were labeled as "Won't Have" on the GitHub project board and scoped out due to time constraints. They are intended to be implemented at a later date.
+
+- As a site user I can register for the newsletter so that I receive regular updates and news directly to my email.
+- As a site user I can support the site by giving a small amount using a service of my choice so that I can contribute to the upkeep and improvement of the site.
+
+
 
 ### Design
 
