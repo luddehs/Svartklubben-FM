@@ -1,8 +1,8 @@
 # Svartklubben FM
 
-Welcome to Svartklubben FM, a music blog dedicated to promoting music discovery and enhancing your listening experience. The app is targeted towards users who enjoy a wide range of music genres, whether you're looking for playlists curated to fit a specific mood or eager to discover tunes beyond the mainstream charts. 
+Welcome to Svartklubben FM, a music blog dedicated to promoting music discovery and enhancing your listening experience. The app is targeted towards users who enjoy a wide range of music genres, whether you're looking for playlists curated to fit a specific mood or eager to discover tunes beyond the mainstream charts.
 
-Svartklubben FM serves as a hub for music enthusiasts, offering the ability to subscribe to playlists and newsletters. Subscribers receive frequently curated playlists and monthly updates, ensuring you always have music to enjoy.
+Svartklubben FM serves as a hub for music enthusiasts, offering frequently updated blogposts and the ability to subscribe to playlists, ensuring you always have music to enjoy.
 
 The live link can be found here - []()
 
