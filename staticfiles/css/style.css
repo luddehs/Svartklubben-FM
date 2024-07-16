@@ -27,10 +27,12 @@ body {
 
 .nav-link {
     color: #f75067 !important;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .nav-link.active {
     color: #00bd67 !important;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .card {
