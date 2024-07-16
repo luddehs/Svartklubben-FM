@@ -5,8 +5,7 @@ body {
 
 .brand {
     font-family: Righteous, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 2rem;
     color: #4A4A4F;
 }
 
@@ -23,15 +22,15 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #fcfbf4;
 }
 
-.navbar-text-red {
-    color: red;
+.nav-link {
+    color: #f75067;
 }
 
-.navbar-text-green {
-    color: green;
+.nav-link.active {
+    color: #00bd67;
 }
 
 .card {
