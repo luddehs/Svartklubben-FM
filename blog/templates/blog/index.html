@@ -22,7 +22,7 @@
                                 alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="label d-flex justify-content-center">{{ post.label }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
