@@ -253,5 +253,7 @@ To clone this repository, follow these steps:
 ## Frameworks - Libraries - Programs Used
 
 ## Credits
+https://www.w3schools.com/
+https://fontawesome.com/
 
 ## Acknowledgments
