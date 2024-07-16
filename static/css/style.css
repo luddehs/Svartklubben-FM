@@ -26,11 +26,11 @@ body {
 }
 
 .nav-link {
-    color: #f75067;
+    color: #f75067 !important;
 }
 
 .nav-link.active {
-    color: #00bd67;
+    color: #00bd67 !important;
 }
 
 .card {
