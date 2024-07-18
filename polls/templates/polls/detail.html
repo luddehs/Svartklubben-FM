@@ -2,17 +2,36 @@
 {% block content %}
 {% load static %}
 
-<form action="{% url 'polls:vote' question.id %}" method="post">
-    {% csrf_token %}
-    <fieldset>
-        <legend><h1>{{ question.question_text }}</h1></legend>
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-        {% for choice in question.choice_set.all %}
-            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-        {% endfor %}
-    </fieldset>
-    <input type="submit" value="Vote">
-</form>
+<div class="mx-0 mx-sm-auto">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+                <p>
+                    <legend><h1>{{ question.question_text }}</h1></legend>
+                </p>
+            </div>
+            <div>
+                <form class="px-4" action="{% url 'polls:vote' question.id %}" method="post">
+                    {% csrf_token %}
+                    <p class="text-center"><strong>Your answer:</strong></p>
+                    <div class="d-flex flex-column align-items-center">
+                        <fieldset class="form-check mb-2">
+                            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                            {% for choice in question.choice_set.all %}
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                                    <label class="form-check-label" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                                </div>
+                            {% endfor %}
+                        </fieldset>
+                    </div>
+                    <div class="text-center">
+                        <input class="btn btn-primary" type="submit" value="Vote">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
