@@ -1,7 +1,7 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
-{% url 'polls' as polls_url %}
+{% url 'polls:index' as polls_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -19,8 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Righteous&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">-->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">-->
     <script src="https://kit.fontawesome.com/a65304f791.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
@@ -48,23 +46,28 @@
                             href="{% url 'home' %}">blog</a>
                     </li>
                     <li class="nav-item">
-                        <a
-                          class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page" 
-                          href="{% url 'about' %}">about</a>
-                      </li>
-                      {% if user.is_authenticated %}
-                      <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">sign out</a>
-                      </li>
-                      {% else %}
-                      <li class="nav-item">
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page" 
+                            href="{% url 'about' %}">about</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == polls_url %}active{% endif %}" aria-current="page" 
+                            href="{% url 'polls:index' %}">polls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
+                            href="{% url 'account_logout' %}">sign out</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
                             href="{% url 'account_signup' %}">sign up</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">sign in</a>
-                      </li>
-                      {% endif %}
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" 
+                            href="{% url 'account_login' %}">sign in</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -91,12 +94,12 @@
             {% endblock %}
         </p>
         <p class="m-1 text-center text-white">
-            <a href="https://www.facebook.com/" target=”_blank”><i class="fa-brands fa-facebook-f ms-3 text-white"></i></a>
-            <a href="https://www.instagram.com/" target=”_blank”><i class="fa-brands fa-instagram ms-3 text-white"></i></a>
-            <a href="https://www.youtube.com/" target=”_blank”><i class="fa-brands fa-youtube ms-3 text-white"></i></a>
-            <a href="https://open.spotify.com/" target=”_blank”><i class="fa-brands fa-spotify ms-3 text-white"></i></a>
-            <a href="https://soundcloud.com/" target=”_blank”><i class="fa-brands fa-soundcloud ms-3 text-white"></i></a>
-            <a href="https://music.apple.com/us/browse" target=”_blank”><i class="fa-brands fa-itunes-note ms-3 text-white"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f ms-3 text-white"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram ms-3 text-white"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube ms-3 text-white"></i></a>
+            <a href="https://open.spotify.com/" target="_blank"><i class="fa-brands fa-spotify ms-3 text-white"></i></a>
+            <a href="https://soundcloud.com/" target="_blank"><i class="fa-brands fa-soundcloud ms-3 text-white"></i></a>
+            <a href="https://music.apple.com/us/browse" target="_blank"><i class="fa-brands fa-itunes-note ms-3 text-white"></i></a>
         </p>
     </footer>
 
