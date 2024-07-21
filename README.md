@@ -67,15 +67,24 @@ The following user stories were labeled as "Won't Have" or "Could Have" on the G
 - As a site user I can register for the newsletter so that I receive regular updates and news directly to my email.
 - As a site user I can support the site by giving a small amount using a service of my choice so that I can contribute to the upkeep and improvement of the site.
 
-
-
 ### Design
 
-#### Colour Scheme
+The design of svartklubben fm is intentionally simple and clean. This minimalist approach aligns with our goal of fostering curiosity and theme connection as visitors explore new music. By eliminating unnecessary distractions, the aim is to create a focused and immersive experience for music discovery.
 
-#### Imagery 
+#### Colour Scheme
+Colour palette from Coolors
+
+![Colour Palette](docs/readme_images/colour-scheme.png)
+
+The website's color scheme primarily features dark gray and white, complemented by red and green buttons and links. This palette is inspired by the theme of a lighthouse. The dark gray and white symbolize the lighthouse structure, while the red and green represent the colors of the light emitted from the lighthouse. This cohesive color scheme enhances the thematic experience of the site.
+
+#### Imagery
+
+The site features a single static image on the About page, showcasing the lighthouse of Svartklubben on a foggy night with red and green lights illuminating the misty sky. Each blog post includes an image uploaded by the site administrator, selected to reflect the mood of each playlist. All images are photographed by the site owner. If no specific image is provided for a post, a placeholder image of the island with the lighthouse will be used.
 
 #### Fonts
+
+The main font used for the body of the website is Quicksand, while the title in the navigation bar uses the Righteous font. Both fonts are imported via Google Fonts. In case the primary fonts fail to load, Sans Serif is set as the backup font.
 
 #### Wireframes
 
@@ -128,7 +137,6 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 ## Security Features and Defensive Design
 
 ### User Authentication
-
 
 ### Form Validation 
 
@@ -255,5 +263,8 @@ To clone this repository, follow these steps:
 ## Credits
 https://www.w3schools.com/
 https://fontawesome.com/
+
+https://fonts.google.com/
+https://singo-fogdo.se/SHBf/singo_forr/lm-sk/index.htm - placeholder image
 
 ## Acknowledgments
