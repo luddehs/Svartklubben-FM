@@ -49,7 +49,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #00bd67;
+    background-color: #f75067;
 }
 
 .scale {
@@ -73,7 +73,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #282929;
     color: white;
     position: relative;
 }
@@ -90,7 +90,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #282929;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -99,13 +99,9 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #282929;
 }
 
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
 
 .post-title {
     margin-top: 10%;
@@ -136,24 +132,24 @@ body {
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #00bd67;
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: #00bd67;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #f75067;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #00bd67;
     background: transparent;
     border: none;
 }
