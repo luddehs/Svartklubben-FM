@@ -18,9 +18,10 @@
                         <fieldset class="form-check mb-2">
                             {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
                             {% for choice in question.choice_set.all %}
+                                
                                 <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-                                    <label class="form-check-label" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                                    <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if choice.id == vote.choice.id %} checked="true" {%endif%}>
+                                    <label class="form-check-label" for="choice{{ forloop.counter }}" >{{ choice.choice_text }}</label>
                                 </div>
                             {% endfor %}
                         </fieldset>
