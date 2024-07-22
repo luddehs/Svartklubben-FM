@@ -35,6 +35,11 @@ body {
     color: #00bd67 !important;
 }
 
+.nav-link-hover:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
 .card {
     border: none;
     background-color: transparent;

@@ -148,13 +148,21 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 
 ### Header
 
-![header]()
+![header](docs/readme_images/navbar.png)
 
-**Logo**
+- The svartklubben fm title uses the Righteous font with all text in white to ensure it stands out. Only lowercase letters are used to maintain the thematic consistency. The title is positioned in the top left of the navigation bar and is linked to the home page for ease of navigation for the user.
 
 **Navigation Bar**
 
-![header]()
+- The navigation bar is located at the top of every page, providing links to all other sections of the site.
+- Upon signing in, the polls page appears in the navigation bar, and users are able to access it.
+- Once a user signs in, the options to sign up or sign in will change to an option to sign out.
+
+![header](docs/readme_images/navbar-2.png)
+
+- The navigation bar is fully responsive and collapses into a hamburger menu on smaller screens.
+- The active page that the user is on is highlighted in brand green.
+- Hovering over the links will lighten the font color and underline the link.
 
 ### Blog Page
 
