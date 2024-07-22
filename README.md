@@ -164,7 +164,36 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 - The active page that the user is on is highlighted in brand green.
 - Hovering over the links will lighten the font color and underline the link.
 
+### Footer
+
+![header](docs/readme_images/footer.png)
+
+- The footer section includes links to Facebook, Instagram, YouTube, Spotify, SoundCloud, and Apple Music.
+- Clicking these links opens them in a separate browser tab, ensuring users are not navigated away from the site.
+- A copyright notice stating "2024 Svartklubben FM" is displayed.
+
 ### Blog Page
+
+![header](docs/readme_images/blog-index.png)
+
+The blog page displays a list of blog posts in a responsive grid layout. Each post is presented with a featured image, title, excerpt, and publication date. Below are the details of the implementation:
+
+**Layout and Structure**
+- Container: The entire content is wrapped within a container-fluid for full-width responsiveness.
+- Row and Column Setup: The layout uses Bootstrap's grid system with a row to contain the posts and individual columns (col-md-4) for each post.
+- The layout ensures that after every three posts, a new row starts to maintain alignment.
+
+**Blog Post Display**
+- Post Iteration: Each post is rendered using a loop, with individual posts showcased within a card component.
+- Featured Image: Each blog post features an image. If no image is uploaded, a default placeholder image is shown.
+- Content Label: Categorizes blog posts by different content formats.
+- Title: The blog post title is presented as a clickable link that directs users to the post's detailed page.
+- Excerpt: A concise summary of the post’s content is displayed.
+- Publication Date: The date when the post was published is shown below the excerpt.
+
+**Pagination**
+- If the content is paginated, navigation buttons (PREV and NEXT) are provided to move between pages.
+- The navigation buttons are centered and styled for ease of use.
 
 **Blog Posts**
 
@@ -182,9 +211,6 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 
 ### User Polls
 
-### Footer
-
-![header]()
 
 ### Future Features
 
