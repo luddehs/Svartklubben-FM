@@ -9,12 +9,15 @@
                 <p>
                     <legend><h1> Welcome to the polls!</h1></legend>
                 </p>
+                <p>
+                    Please answer the questions listed below:
+                </p>
             </div>
             <div>
                 {% if latest_question_list %}
                     <ul class="px-4">
                 {% for question in latest_question_list %}
-                    <li class="d-flex flex-column align-items-center"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                    <li class="d-flex flex-column align-items-center"><a href="{% url 'polls:detail' question.id %}" class="polls-link">{{ question.question_text }}</a></li>
                 {% endfor %}
                     </ul>
                 {% else %}
@@ -24,5 +27,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock content %}

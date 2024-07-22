@@ -102,6 +102,18 @@ body {
     color: #282929;
 }
 
+.post-link:hover {
+    color: #00bd67;
+}
+
+.polls-link {
+    text-decoration: none;
+    color: #282929;
+}
+
+.polls-link:hover {
+    color: #00bd67;
+}
 
 .post-title {
     margin-top: 10%;
@@ -110,17 +122,17 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #d3d3d3;
 }
 
-.btn-signup,
+.btn-style,
 .btn-edit {
     background-color: #00bd67;
     color: #fff;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
+.btn-style:hover,
+.btn-style:active {
     background-color: #fff;
     color: #00bd67;
 }
