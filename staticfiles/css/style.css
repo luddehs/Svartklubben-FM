@@ -108,11 +108,12 @@ body {
 
 .polls-link {
     text-decoration: none;
-    color: #282929;
+    color: #00bd67;
 }
 
 .polls-link:hover {
-    color: #00bd67;
+    color: #282929;
+    text-decoration: underline;
 }
 
 .post-title {
