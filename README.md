@@ -195,7 +195,15 @@ The blog page displays a list of blog posts in a responsive grid layout. Each po
 - If the content is paginated, navigation buttons (PREV and NEXT) are provided to move between pages.
 - The navigation buttons are centered and styled for ease of use.
 
-**Blog Posts**
+### Blog Posts
+
+![header](docs/readme_images/post-detail.png)
+
+The blog details page showcases a single blog post, including its title, creation date, and featured image. If a featured image is not provided, a placeholder image will be displayed. Each post is intended to include text and a narrative about the playlist featured in the blog. Currently, it only includes a Spotify link to the playlist.
+
+
+
+
 
 ![header]()
 
