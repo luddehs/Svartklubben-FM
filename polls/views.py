@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import F
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -8,7 +10,7 @@ from django.utils import timezone
 from .models import Choice, Question, ChoiceVote
 
 
-class IndexView(generic.ListView):
+class IndexView(LoginRequiredMixin, generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 
@@ -17,12 +19,10 @@ class IndexView(generic.ListView):
         Return the last ten published questions (not including those set to be
         published in the future).
         """
-        return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[
-            :10
-        ]
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:10]
 
 
-class DetailView(generic.DetailView):
+class DetailView(LoginRequiredMixin, generic.DetailView):
     model = Question
     template_name = "polls/detail.html"
 
@@ -42,11 +42,12 @@ class DetailView(generic.DetailView):
         return context
 
 
-class ResultsView(generic.DetailView):
+class ResultsView(LoginRequiredMixin, generic.DetailView):
     model = Question
     template_name = "polls/results.html"
 
 
+@login_required
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -79,6 +80,8 @@ def vote(request, question_id):
             },
         )
 
+
+@login_required
 def delete_vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     vote = ChoiceVote.objects.get(users__in=[request.user], choice__question=question)

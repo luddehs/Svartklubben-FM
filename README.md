@@ -136,6 +136,7 @@ Testing and results can be found [here](/TESTING.md)
 ## Security Features and Defensive Design
 
 ### User Authentication
+- Django's LoginRequiredMixin: Ensures that non-authenticated users attempting to access secure pages are redirected to the login page.
 
 ### Form Validation
 - If incorrect or empty data is entered into a form, the form will not submit. Instead, a warning will appear, informing the user which field contains the error.
