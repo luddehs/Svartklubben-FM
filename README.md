@@ -142,7 +142,7 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 
 ### Database Security
 
-### Custom error pages:
+### Custom error pages
 
 ## Features
 
@@ -201,21 +201,41 @@ The blog page displays a list of blog posts in a responsive grid layout. Each po
 
 The blog details page showcases a single blog post, including its title, creation date, and featured image. If a featured image is not provided, a placeholder image will be displayed. Each post is intended to include text and a narrative about the playlist featured in the blog. Currently, it only includes a Spotify link to the playlist.
 
-
-
-
-
-![header]()
-
 ### About Page
 
-![header]()
+![header](docs/readme_images/about.png)
 
-### Register
+The About page layout and content aim to communicate the mission and background of svartklubben fm, offering visitors a personal connection and insight into the blog’s purpose. The page features a compelling title, a narrative that describes the site’s inspiration and mission, and the date of the last update. It also includes an image of the Svartklubben lighthouse, adding a personal touch. If a profile image is not available, a default placeholder image is displayed.
 
-### Login
+### Sign up
 
-### Logout
+![header](docs/readme_images/sign-up.png)
+
+The sign up page provides an interface for users to join svartklubben fm. Key elements of the page include:
+- Introduction: A welcoming message invites new users to join the community and provides a link for existing members to sign in.
+- Sign-Up Form: To sign up, users need to complete the form with a username, email, and password that follows the stated criteria 
+- After entering valid information, users can submit the registration form by clicking the "Sign Up" button.
+
+### Sign in
+
+![header](docs/readme_images/sign-in.png)
+
+The sign in page provides an interface for users to access their accounts. Key features include:
+- Introduction: Welcomes returning users and provides a link for new users to sign up if they haven't joined yet.
+- Sign-In Form: Users can log in by entering their username and password.
+- Click the "Sign In" button after entering valid information to log in.
+- The "Remember Me" checkbox is optional and allows users to stay signed in on future visits.
+
+
+### Sign out
+
+![header](docs/readme_images/sign-out.png)
+
+The Sign-Out page offers an interface for users to securely log out of their accounts.
+
+
+Django Allauth was installed to handle the sign up, sign in, and sign out functionalities.
+
 
 ### User Polls
 
@@ -302,11 +322,33 @@ To clone this repository, follow these steps:
 
 ## Frameworks - Libraries - Programs Used
 
-## Credits
-https://www.w3schools.com/
-https://fontawesome.com/
+- [Django](https://www.djangoproject.com/): The main Python framework used for developing this project.
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): The authentication library implemented for user account management.
+- [PostgreSQL](https://www.postgresql.org/) The database system used for this project.
+- [Heroku](https://dashboard.heroku.com/login) - The cloud platform used for deploying the website.
+- [Responsinator](http://www.responsinator.com/) - Used to check the website’s responsiveness across various devices.
+- [Figma](https://www.figma.com/) - Used to create wireframe images.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for development tasks, including testing responsiveness and performance.
+- [Font Awesome](https://fontawesome.com/) - Provides icons used in the footer.
+- [GitHub](https://github.com/) - Used for version control and project management.
+- [Google Fonts](https://fonts.google.com/) - Used to import and customize fonts on the site.
+- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+- [PEP8 Online](http://pep8online.com/) - Used to validate Python code against PEP8 standards.
+- [Coolors](https://coolors.co/) - Used to create colour palette image in README.
+- [ChatGPT](https://chatgpt.com/) - Used for proofreading the README.md file.
+- [Summernote](https://summernote.org/): A WYSIWYG editor used for the site administrator to edit posts.
+- [Cloudinary](https://cloudinary.com/): The image hosting service used for uploading and managing images.
+- [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/): The CSS framework used for responsive design and styling.
 
-https://fonts.google.com/
-https://singo-fogdo.se/SHBf/singo_forr/lm-sk/index.htm - placeholder image
+## Credits
+- [Django Docs](https://docs.djangoproject.com/en/5.0/)
+- [Bootstrap 5.0.1 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [W3Schools](https://www.w3schools.com/)
+- [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
+- [Django Docs - Polls App](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
+- [MDB - Boostrap Survey Form](https://mdbootstrap.com/docs/standard/extended/bootstrap-survey-form/)
 
 ## Acknowledgments
+
+Thanks to The Code Institute tutors and slack community for their quick responses and helpful feedback Many thanks to my mentor, Antonio, for his support and guidance.
