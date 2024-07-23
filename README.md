@@ -4,6 +4,8 @@ Welcome to Svartklubben FM, a music blog dedicated to promoting music discovery 
 
 Svartklubben FM serves as a hub for music enthusiasts, offering frequently updated blogposts and the ability to subscribe to playlists, ensuring you always have music to enjoy.
 
+The live link can be found here - [svartklubben fm](https://svartklubben-fm-40d7b348ba12.herokuapp.com/)
+
 - [Svartklubben FM](#svartklubben-fm)
   * [User Experience (UX)](#user-experience-ux)
     + [User Stories](#user-stories)
