@@ -102,9 +102,6 @@ The main font used for the body of the website is Quicksand, while the title in 
 ![About Page](docs/wireframes/about-wr.png)
 </details>
 
-
-<details>
-
 <details>
 
 <summary>Register</summary>
@@ -134,15 +131,18 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 
 ## Testing
 
+Testing and results can be found [here](/TESTING.md)
+
 ## Security Features and Defensive Design
 
 ### User Authentication
 
-### Form Validation 
+### Form Validation
+- If incorrect or empty data is entered into a form, the form will not submit. Instead, a warning will appear, informing the user which field contains the error.
 
 ### Database Security
-
-### Custom error pages
+- The database URL and secret key are stored in the env.py file to prevent unauthorized access to the database. This setup was completed before the initial push to GitHub.
+- Cross-Site Request Forgery (CSRF) tokens are implemented on all forms across the site to enhance security.
 
 ## Features
 

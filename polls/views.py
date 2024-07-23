@@ -78,4 +78,21 @@ def vote(request, question_id):
                 "error_message": "You didn't select a choice.",
             },
         )
-        
+
+def delete_vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    vote = ChoiceVote.objects.get(users__in=[request.user], choice__question=question)
+    if request.POST:
+        print('should delete')
+        vote.users.remove(request.user)
+        vote.choice.votes -= 1
+        vote.save()
+        vote.choice.save()
+        return HttpResponseRedirect(reverse("polls:detail", args=(question.id,)))
+    return render(request, "polls/delete.html",
+                {
+                    "question": question,
+                    "vote": vote,
+                    "error_message": "You didn't select a choice.",
+                },
+    )
