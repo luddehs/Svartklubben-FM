@@ -4,10 +4,6 @@ Welcome to Svartklubben FM, a music blog dedicated to promoting music discovery 
 
 Svartklubben FM serves as a hub for music enthusiasts, offering frequently updated blogposts and the ability to subscribe to playlists, ensuring you always have music to enjoy.
 
-The live link can be found here - []()
-
-![Responsive]()
-
 - [Svartklubben FM](#svartklubben-fm)
   * [User Experience (UX)](#user-experience-ux)
     + [User Stories](#user-stories)
@@ -23,12 +19,12 @@ The live link can be found here - []()
     + [User Authentication](#user-authentication)
     + [Form Validation](#form-validation)
     + [Database Security](#database-security)
-    + [Custom error pages:](#custom-error-pages-)
   * [Features](#features)
     + [Header](#header)
     + [Footer](#footer)
     + [Home Page](#home-page)
     + [About Page](#about-page)
+    + [Polls](#polls)
     + [Future Features](#future-features)
   * [Deployment - Heroku](#deployment---heroku)
   * [Forking this repository](#forking-this-repository)
@@ -109,6 +105,7 @@ The main font used for the body of the website is Quicksand, while the title in 
 ![Register](docs/wireframes/register-wr.png)
 </details>
 
+<details>
 <summary>Sign In</summary>
 
 ![Sign In](docs/wireframes/signin-wr.png)
@@ -128,10 +125,10 @@ GitHub Projects was used to manage the development process with an agile approac
 The four Epics listed above were documented as Milestones within the GitHub project. A GitHub Issue was created for each User Story and allocated to a corresponding Milestone (Epic). Each User Story includes defined acceptance criteria to clarify when the User Story is complete. The acceptance criteria are further broken down into tasks to facilitate the execution of the User Story.
 
 ## Data Model
+Due to time constraints, data models will be included in the next version of the README.
 
 ## Testing
-
-Testing and results can be found [here](/TESTING.md)
+Due to time constraints, all testing will be included in the next version of the README.
 
 ## Security Features and Defensive Design
 
@@ -238,8 +235,8 @@ The Sign-Out page offers an interface for users to securely log out of their acc
 Django Allauth was installed to handle the sign up, sign in, and sign out functionalities.
 
 
-### User Polls
-
+### Polls
+Due to time constraints, the Polls feature will be included in the next README version. 
 
 ### Future Features
 
