@@ -127,7 +127,36 @@ GitHub Projects was used to manage the development process with an agile approac
 The four Epics listed above were documented as Milestones within the GitHub project. A GitHub Issue was created for each User Story and allocated to a corresponding Milestone (Epic). Each User Story includes defined acceptance criteria to clarify when the User Story is complete. The acceptance criteria are further broken down into tasks to facilitate the execution of the User Story.
 
 ## Data Model
-Due to time constraints, data models will be included in the next version of the README.
+This Django project follows Object-Oriented Programming principles and utilizes Class-Based Generic Views. It includes three main apps: Blog, About, and Polls. Each app defines models that map to database tables and establish key relationships.
+
+#### Blog
+The Post model represents blog posts, capturing content, metadata, and status. It has a many-to-one relationship with the User model through the author field, allowing multiple posts per user.
+
+#### About
+The About model manages content for the "About" page. It stands alone with fields for the title, content, profile image, and an updated timestamp, having no direct relationships with other models.
+
+#### Polls
+The Question model represents poll questions, while the Choice model represents possible answers. The ChoiceVote model tracks user votes, establishing a many-to-many relationship between User and Choice.
+
+<details>
+
+ <summary>Database Schema</summary>
+
+![Database Schema](docs/readme_images/data-models.png)
+</details>
+
+The diagram illustrates the relationships:
+
+- Post → User: Many-to-one (Post has an author foreign key to User).
+- Choice → Question: One-to-many (Choices associated with a Question).
+- ChoiceVote → Choice: Many-to-one (Votes linked to Choices).
+- ChoiceVote → User: Many-to-many (Users vote on multiple Choices).
+- The About model is independent with no relationships.
+
+User authentication is handled by Django AllAuth, with a custom polls model enabling user participation in polls.
+
+
+
 
 ## Testing
 Due to time constraints, all testing will be included in the next version of the README.
