@@ -173,6 +173,13 @@ Due to time constraints, all testing will be included in the next version of the
 - The database URL and secret key are stored in the env.py file to prevent unauthorized access to the database. This setup was completed before the initial push to GitHub.
 - Cross-Site Request Forgery (CSRF) tokens are implemented on all forms across the site to enhance security.
 
+### Custom error pages
+Custom error pages were designed to provide users with more information about the error and buttons to guide them back to the site.
+- 400 Bad Request: svartklubben fm is unable to process this request.
+- 403 Forbidden: It appears you're trying to access restricted content. Please log out and sign in with the correct account.
+- 404 Not Found: The page you're looking for doesn't exist.
+- 500 Server Error: svartklubben fm is currently unable to handle this request.
+
 ## Features
 
 ### Header
