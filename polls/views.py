@@ -52,21 +52,20 @@ def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
-        user_vote = ChoiceVote(choice=selected_choice)
-        user_vote.save()
+        user_vote, created = ChoiceVote.objects.get_or_create(choice=selected_choice)
         if request.user not in user_vote.users.all():
             user_vote.users.add(request.user)
             user_vote.save()
             selected_choice.votes = F("votes") + 1
             selected_choice.save()
-            previous_votes = ChoiceVote.objects.filter(choice__question=question)
-            for vote in previous_votes:
-                if vote.choice != selected_choice:
-                    if request.user in vote.users.all():
-                        vote.users.remove(request.user)
-                        vote.choice.votes -= 1
-                        vote.save()
-                        vote.choice.save()
+        previous_votes = ChoiceVote.objects.filter(choice__question=question)
+        for vote in previous_votes:
+            if vote.choice != selected_choice:
+                if request.user in vote.users.all():
+                    vote.users.remove(request.user)
+                    vote.choice.votes -= 1
+                    vote.save()
+                    vote.choice.save()
             
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
     except (KeyError, Choice.DoesNotExist):
