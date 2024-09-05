@@ -274,7 +274,7 @@ Django Allauth was installed to handle the sign up, sign in, and sign out functi
 
 
 ### Polls
-Due to time constraints, the Polls feature will be included in the next README version. 
+
 
 ### Future Features
 
