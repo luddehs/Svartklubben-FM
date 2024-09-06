@@ -165,11 +165,6 @@ body {
     background: transparent;
 }
 
-.btn-delete {
-    color: #fff;
-    background: #f75067;
-}
-
 .btn-like:hover,
 .btn-like:active {
     color: #00bd67;
@@ -185,8 +180,10 @@ body {
     color: rgb(222, 146, 168);
 }
 
+/* Polls Page */
 .polls-header {
     background-color: #00bd67;
+    background-image: url("{% static 'images/polls-bg.jpg' %}"); /* Add background image */
     background-size: cover;
     background-position: center;
     color: white;
@@ -194,7 +191,7 @@ body {
 }
 
 /* Polls list and buttons */
-.polls-page .list-group-item {
+.list-group-item {
     background-color: #fff;
     border: none;
     padding: 1rem 1.5rem;
@@ -202,23 +199,23 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.polls-page .list-group-item:hover {
+.list-group-item:hover {
     background-color: #f1f1f1;
 }
 
-.polls-page .polls-link {
+.polls-link {
     font-size: 1.2rem;
     font-weight: 500;
     color: #00bd67;
     text-decoration: none;
 }
 
-.polls-page .polls-link:hover {
+.polls-link:hover {
     color: #f75067;
     text-decoration: underline;
 }
 
-.polls-page .btn-style {
+.btn-style {
     background-color: #00bd67;
     color: #fff;
     border-radius: 20px;
@@ -226,21 +223,20 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.polls-page .btn-style:hover {
+.btn-style:hover {
     background-color: #fff;
     color: #00bd67;
     border: 1px solid #00bd67;
 }
 
-/* Additional Styling */
-.polls-page .card {
+.card {
     border-radius: 12px;
     padding: 1.5rem;
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
-.polls-page .container {
+.container {
     max-width: 900px;
     margin: auto;
 }
@@ -254,14 +250,25 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.polls-question {
-    font-size: 1.2rem;
-    font-weight: 500;
+/* Poll question */
+.polls-question-title {
     color: #282929;
-    margin-right: 10px; 
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-.polls-page .btn-style {
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #282929;
+}
+
+.btn-style {
     padding: 0.4rem 1rem; 
     margin-left: 5px;  
     background-color: #00bd67;
@@ -270,6 +277,22 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.polls-page .list-group-item {
-    padding: 10px 15px; 
+.btn-style:hover {
+    background-color: #fff;
+    color: #00bd67;
+    border: 1px solid #00bd67;
+}
+
+.btn-back {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: border 0.3s ease, color 0.3s ease;
+}
+
+.btn-back:hover {
+    border: 1px solid #000000;
 }

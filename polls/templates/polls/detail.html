@@ -7,7 +7,7 @@
         <div class="card-body">
             <div class="text-center">
                 <p>
-                    <legend><h1>{{ question.question_text }}</h1></legend>
+                    <legend><h1 class="polls-question-title">{{ question.question_text }}</h1></legend>
                 </p>
             </div>
             <div>
@@ -18,19 +18,21 @@
                         <fieldset class="form-check mb-2">
                             {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
                             {% for choice in question.choice_set.all %}
-                                
-                                <div class="form-check mb-3">
+                                <div class="form-check mb-3 polls-choice-item">
                                     <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if choice.id == vote.choice.id %} checked="true" {%endif%}>
                                     <label class="form-check-label" for="choice{{ forloop.counter }}" >{{ choice.choice_text }}</label>
                                 </div>
                             {% endfor %}
                         </fieldset>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center mt-3">
                         <input class="btn btn-style" type="submit" value="{% if vote.choice.id %} Change Vote {%else%} Vote{%endif%}">
                         {% if vote.choice.id %} 
-                            <a class="btn btn-delete" href="{%url 'polls:delete_vote' question.pk %}">Delete Vote</a>
-                        {%endif%}
+                            <a class="btn btn-delete" href="{% url 'polls:delete_vote' question.pk %}">Delete Vote</a>
+                        {% endif %}
+                    </div>
+                    <div class="text-center mt-3">
+                        <a class="btn btn-back" href="{% url 'polls:index' %}">Go Back to Questions</a>
                     </div>
                 </form>
             </div>
