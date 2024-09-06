@@ -1,10 +1,10 @@
+/* Existing Styles */
 body {
     background-color: #F9FAFC;
     font-family: Quicksand, sans-serif;
 }
 
 /* Navbar */
-
 .brand {
     font-family: Righteous, sans-serif;
     font-size: 2rem;
@@ -141,12 +141,12 @@ body {
     background-color: #f75067;
     color: #fff;
 }
+
 .btn-delete:hover,
 .btn-delete:active {
     background-color: #fff;
     color: #f75067;
 }
-
 
 .link {
     color: #f75067;
@@ -183,4 +183,93 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+.polls-header {
+    background-color: #00bd67;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem 0;
+}
+
+/* Polls list and buttons */
+.polls-page .list-group-item {
+    background-color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.polls-page .list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+.polls-page .polls-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #00bd67;
+    text-decoration: none;
+}
+
+.polls-page .polls-link:hover {
+    color: #f75067;
+    text-decoration: underline;
+}
+
+.polls-page .btn-style {
+    background-color: #00bd67;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.polls-page .btn-style:hover {
+    background-color: #fff;
+    color: #00bd67;
+    border: 1px solid #00bd67;
+}
+
+/* Additional Styling */
+.polls-page .card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.polls-page .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Utility classes */
+.text-white {
+    color: white;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.polls-question {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #282929;
+    margin-right: 10px; 
+}
+
+.polls-page .btn-style {
+    padding: 0.4rem 1rem; 
+    margin-left: 5px;  
+    background-color: #00bd67;
+    color: #fff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.polls-page .list-group-item {
+    padding: 10px 15px; 
 }

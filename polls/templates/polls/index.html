@@ -2,31 +2,34 @@
 {% block content %}
 {% load static %}
 
-<div class="mx-0 mx-sm-auto">
-    <div class="card">
+<div class="polls-header text-center py-5">
+    <h1 class="display-4 text-white">Welcome to the Polls!</h1>
+    <p class="lead text-white">Please take a moment to answer the questions below.</p>
+</div>
+
+<div class="container py-4">
+    <div class="card shadow-sm">
         <div class="card-body">
-            <div class="text-center">
-                <p>
-                    <legend><h1> Welcome to the polls!</h1></legend>
-                </p>
-                <p>
-                    Please answer the questions listed below:
-                </p>
+            <div class="text-center mb-4">
+                <h2 class="mb-3">Poll Questions</h2>
+                <p class="text-muted">Your opinion matters! Choose a question to answer.</p>
             </div>
             <div>
                 {% if latest_question_list %}
-                    <ul class="px-4">
-                {% for question in latest_question_list %}
-                    <li class="d-flex flex-column align-items-center"><a href="{% url 'polls:detail' question.id %}" class="polls-link">{{ question.question_text }}</a></li>
-                {% endfor %}
+                    <ul class="list-group list-group-flush">
+                        {% for question in latest_question_list %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="polls-question">{{ question.question_text }}</span>
+                                <a href="{% url 'polls:detail' question.id %}" class="btn btn-style">Answer</a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 {% else %}
-                    <p>No polls are available.</p>
+                    <p class="text-center text-muted">No polls are available at the moment.</p>
                 {% endif %}
             </div>
         </div>
     </div>
 </div>
-
 
 {% endblock content %}
