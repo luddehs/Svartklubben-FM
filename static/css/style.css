@@ -258,31 +258,28 @@ body {
     margin-bottom: 1rem;
 }
 
-.form-check-input {
-    margin-right: 10px;
+/* Polls Choice Items Styling */
+.polls-results-list {
+    list-style: none;
+    padding: 0;
 }
 
-.form-check-label {
-    font-size: 1rem;
+.polls-choice-item {
+    font-size: 1.2rem;
     font-weight: 500;
     color: #282929;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.btn-style {
-    padding: 0.4rem 1rem; 
-    margin-left: 5px;  
-    background-color: #00bd67;
-    color: #fff;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.polls-choice-item:last-child {
+    border-bottom: none;
 }
 
-.btn-style:hover {
-    background-color: #fff;
-    color: #00bd67;
-    border: 1px solid #00bd67;
-}
-
+/* Button Styling */
 .btn-back {
     background-color: #ffffff;
     color: #000000;
@@ -291,8 +288,10 @@ body {
     text-decoration: none;
     display: inline-block;
     transition: border 0.3s ease, color 0.3s ease;
+    border: 1px solid #000000;
 }
 
 .btn-back:hover {
-    border: 1px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
 }

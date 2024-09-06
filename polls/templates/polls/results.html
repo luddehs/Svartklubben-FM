@@ -7,17 +7,20 @@
         <div class="card-body">
             <div class="text-center">
                 <p>
-                    <legend><h1>{{ question.question_text }}</h1></legend>
+                    <legend><h1 class="polls-question-title">{{ question.question_text }}</h1></legend>
                 </p>
             </div>
             <div>
-                <ul class="px-4">
+                <ul class="px-4 polls-results-list">
                     {% for choice in question.choice_set.all %}
-                        <li class="d-flex flex-column align-items-center">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+                        <li class="d-flex justify-content-between align-items-center polls-choice-item">
+                            <span>{{ choice.choice_text }}</span>
+                            <span>{{ choice.votes }} vote{{ choice.votes|pluralize }}</span>
+                        </li>
                     {% endfor %}
-                    </ul>
-                <div class="text-center">    
-                    <a href="{% url 'polls:index' %}" class="polls-link">Return to the list of questions</a>
+                </ul>
+                <div class="text-center mt-3">
+                    <a class="btn btn-back" href="{% url 'polls:index' %}">Go Back to Questions</a>
                 </div>
             </div>
         </div>
