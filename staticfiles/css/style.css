@@ -140,12 +140,15 @@ body {
 .btn-delete {
     background-color: #f75067;
     color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-delete:hover,
-.btn-delete:active {
+.btn-delete:hover {
     background-color: #fff;
     color: #f75067;
+    border: 1px solid #f75067;
 }
 
 .link {
@@ -256,6 +259,13 @@ body {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+
+.polls-question-text {
+    color: #282929;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 /* Polls Choice Items Styling */
