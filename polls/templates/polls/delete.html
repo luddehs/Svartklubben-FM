@@ -6,22 +6,22 @@
     <div class="card">
         <div class="card-body">
             <div class="text-center">
-                <h1 class="polls-question-title">Are you sure you want to delete this vote?</h1>
-                <h2 class="polls-question-text">{{ question.question_text }}</h2>
+                <h1>Are you sure you want to delete this vote?</h1>
+                <h2 class ="mb-3">{{ question.question_text }}</h2>
+                <p class="text-muted">Your answer:</p>
             </div>
             <div>
                 <form class="px-4" action="{% url 'polls:delete_vote' question.id %}" method="post">
                     {% csrf_token %}
-                    <p class="text-center"><strong>Your answer:</strong></p>
                     <div class="d-flex flex-column align-items-center">
-                        <fieldset class="form-check mb-3">
+                        <fieldset class="form-check mb-2">
                             {% if error_message %}
-                                <p class="text-danger"><strong>{{ error_message }}</strong></p>
+                                <p class="text-center text-danger"><strong>{{ error_message }}</strong></p>
                             {% endif %}
                             {% for choice in question.choice_set.all %}
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if choice.id == vote.choice.id %} checked="true" {% endif %} onclick="return false;" onkeydown="return false;">
-                                    <label class="form-check-label" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                                <div class="form-check mb-3 polls-choice-item d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label mb-0" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                                    <input class="form-check-input ms-3" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if choice.id == vote.choice.id %} checked="true" {% endif %} onclick="return false;" onkeydown="return false;">
                                 </div>
                             {% endfor %}
                         </fieldset>

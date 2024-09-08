@@ -197,6 +197,7 @@ body {
 .list-group-item {
     background-color: #fff;
     border: none;
+    font-size: 1.2rem;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #e9ecef;
     transition: background-color 0.3s ease;
@@ -254,12 +255,6 @@ body {
 }
 
 /* Poll question */
-.polls-question-title {
-    color: #282929;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
 
 .polls-question-text {
     color: #282929;
@@ -278,7 +273,7 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     color: #282929;
-    padding: 0.5rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid #e9ecef;
     display: flex;
     justify-content: space-between;
