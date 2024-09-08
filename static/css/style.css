@@ -276,3 +276,13 @@ body {
     border-bottom: 1px solid #e9ecef;
 }
 
+/* Footer */
+
+.footer a i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a i:hover {
+    color: #00bd67 !important;
+    transform: scale(1.2);
+}
