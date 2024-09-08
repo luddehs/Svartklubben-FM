@@ -2,10 +2,10 @@
 {% block content %}
 {% load static %}
 
-<div class="mx-0 mx-sm-auto">
-    <div class="card">
+<div class="container py-4">
+    <div class="card shadow-sm">
         <div class="card-body">
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <p>
                     <h2 class="mb-3 polls-question-title">{{ question.question_text }}</h2>
                 </p>
@@ -18,7 +18,7 @@
                         <fieldset class="form-check mb-2">
                             {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
                             {% for choice in question.choice_set.all %}
-                                <div class="form-check mb-3 polls-choice-item d-flex justify-content-between align-items-center">
+                                <div class="form-check polls-choice-item d-flex justify-content-between align-items-center">
                                     <label class="form-check-label mb-0" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
                                     <input class="form-check-input ms-3" type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" {% if choice.id == vote.choice.id %} checked="true" {%endif%}>
                                 </div>

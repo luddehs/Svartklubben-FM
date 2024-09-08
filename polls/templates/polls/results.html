@@ -2,13 +2,14 @@
 {% block content %}
 {% load static %}
 
-<div class="mx-0 mx-sm-auto">
-    <div class="card">
+<div class="container py-4">
+    <div class="card shadow-sm">
         <div class="card-body">
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <p>
-                    <h2 class ="mb-3">{{ question.question_text }}</h2>
+                    <h2 class="mb-3">{{ question.question_text }}</h2>
                 </p>
+                <p class="text-muted">Results:</p>
             </div>
             <div>
                 <ul class="px-4 polls-results-list">
@@ -19,7 +20,7 @@
                         </li>
                     {% endfor %}
                 </ul>
-                <div class="text-center mt-3">
+                <div class="text-center mt-4">
                     <a class="btn btn-back" href="{% url 'polls:index' %}">Go Back to Questions</a>
                 </div>
             </div>

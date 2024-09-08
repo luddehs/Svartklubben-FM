@@ -105,16 +105,6 @@ body {
     color: #00bd67;
 }
 
-.polls-link {
-    text-decoration: none;
-    color: #00bd67;
-}
-
-.polls-link:hover {
-    color: #282929;
-    text-decoration: underline;
-}
-
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
@@ -123,6 +113,35 @@ body {
 .post-subtitle {
     margin-left: 5%;
     color: #d3d3d3;
+}
+
+
+.link {
+    color: #f75067;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #00bd67;
+    text-decoration: underline;
+}
+
+/* Buttons */
+
+.btn-style {
+    background-color: #00bd67;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin: 0px 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-style:hover {
+    background-color: #fff;
+    color: #00bd67;
+    border: 1px solid #00bd67;
 }
 
 .btn-style,
@@ -142,6 +161,7 @@ body {
     color: #fff;
     border-radius: 20px;
     padding: 0.5rem 1rem;
+    margin: 0px 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -149,17 +169,6 @@ body {
     background-color: #fff;
     color: #f75067;
     border: 1px solid #f75067;
-}
-
-.link {
-    color: #f75067;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #00bd67;
-    text-decoration: underline;
 }
 
 .btn-like {
@@ -173,6 +182,22 @@ body {
     color: #00bd67;
     background: transparent;
     border: none;
+}
+
+.btn-back {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: border 0.3s ease, color 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.btn-back:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .faded {
@@ -193,7 +218,6 @@ body {
     padding: 2rem 0;
 }
 
-/* Polls list and buttons */
 .list-group-item {
     background-color: #fff;
     border: none;
@@ -205,32 +229,6 @@ body {
 
 .list-group-item:hover {
     background-color: #f1f1f1;
-}
-
-.polls-link {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #00bd67;
-    text-decoration: none;
-}
-
-.polls-link:hover {
-    color: #f75067;
-    text-decoration: underline;
-}
-
-.btn-style {
-    background-color: #00bd67;
-    color: #fff;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-style:hover {
-    background-color: #fff;
-    color: #00bd67;
-    border: 1px solid #00bd67;
 }
 
 .card {
@@ -255,12 +253,6 @@ body {
 }
 
 /* Poll question */
-.polls-question-title {
-    color: #282929;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
 
 .polls-question-text {
     color: #282929;
@@ -270,6 +262,7 @@ body {
 }
 
 /* Polls Choice Items Styling */
+
 .polls-results-list {
     list-style: none;
     padding: 0;
@@ -281,28 +274,5 @@ body {
     color: #282929;
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #e9ecef;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.polls-choice-item:last-child {
-    border-bottom: none;
-}
-
-/* Button Styling */
-.btn-back {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 20px;
-    padding: 0.4rem 1rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: border 0.3s ease, color 0.3s ease;
-    border: 1px solid #000000;
-}
-
-.btn-back:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
