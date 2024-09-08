@@ -40,9 +40,33 @@ body {
     text-decoration: underline !important;
 }
 
+/* Card styling */
+
 .card {
     border: none;
     background-color: transparent;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: #00bd67;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+    transform: translateY(-3px); /* Slight movement up on hover */
+    transition: all 0.3s ease;
+    cursor: pointer; /* Show pointer on hover */
+    background-color: #f1f1f1;
 }
 
 .image-container {
@@ -229,13 +253,6 @@ body {
 
 .list-group-item:hover {
     background-color: #f1f1f1;
-}
-
-.card {
-    border-radius: 12px;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 .container {
