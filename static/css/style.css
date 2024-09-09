@@ -28,9 +28,9 @@ body {
 /* Navbar */
 
 .navbar {
-    background: linear-gradient(45deg, #282929, #4A4A4F); /* Gradient background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    transition: all 0.3s ease; /* Smooth transitions for interactive effects */
+    background: linear-gradient(45deg, #282929, #4A4A4F);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,7 +43,7 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2.5rem; /* Slightly larger brand text */
+    font-size: 2.5rem;
     color: #fff !important;
     transition: color 0.3s ease;
 }
