@@ -1,14 +1,12 @@
 /* Existing Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #F9FAFC;
     font-family: Quicksand, sans-serif;
-}
-
-/* Navbar */
-.brand {
-    font-family: Righteous, sans-serif;
-    font-size: 2rem;
-    color: #4A4A4F;
 }
 
 .thin {
@@ -27,17 +25,54 @@ body {
     background-color: #ffffff;
 }
 
+/* Navbar */
+
+.navbar {
+    background: linear-gradient(45deg, #282929, #4A4A4F); /* Gradient background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: all 0.3s ease; /* Smooth transitions for interactive effects */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-family: Righteous, sans-serif;
+    font-size: 2rem;
+    color: #4A4A4F;
+}
+
+.navbar-brand {
+    font-size: 2.5rem; /* Slightly larger brand text */
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #00bd67 !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
 .nav-link {
-    color: #f75067 !important;
+    font-size: 1.1rem;
+    color: #ffffff !important;
+    padding: 0.75rem 1.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-link.active {
     color: #00bd67 !important;
+    font-weight: bold;
 }
 
-.nav-link-hover:hover {
-    color: #ffffff !important;
-    text-decoration: underline !important;
+.nav-link:hover {
+    color: #00bd67 !important;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
 }
 
 /* Card styling */
