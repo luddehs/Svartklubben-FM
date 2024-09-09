@@ -28,7 +28,10 @@ body {
 /* Navbar */
 
 .navbar {
-    background: linear-gradient(45deg, #282929, #4A4A4F);
+    background-color: #0f0f0f;
+    background-image: url('/static/images/grain-texture.jpg'); /* Noise texture */
+    background-size: cover; /* Ensure the texture covers the entire background */
+    background-blend-mode: overlay; /* Blend the texture with the background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: sticky;
@@ -329,6 +332,14 @@ body {
 }
 
 /* Footer */
+
+.footer {
+    background-color: #0f0f0f;
+    background-image: url('/static/images/grain-texture.jpg'); /* Noise texture */
+    background-size: cover; /* Ensure the texture covers the entire background */
+    background-blend-mode: overlay; /* Blend the texture with the background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
 .footer a i {
     transition: color 0.3s ease, transform 0.3s ease;
