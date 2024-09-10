@@ -13,12 +13,10 @@
     <title>svartklubben fm</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Google Fonts CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Righteous&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome CSS -->
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a65304f791.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
@@ -34,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid nav-margin">
-            <a class="navbar-brand brand" href="{% url 'home' %}">svartklubben fm</a>
+            <a class="navbar-brand brand" href="{% url 'home' %}">Svartklubben FM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,30 +40,29 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">blog</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == about_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'about' %}">about</a>
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == polls_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'polls:index' %}">polls</a>
+                        <a class="nav-link {% if request.path == polls_url %}active{% endif %}" href="{% url 'polls:index' %}">Polls</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">sign out</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Welcome, {{ user }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item text-center" href="{% url 'account_logout' %}">Sign Out</a></li>
+                        </ul>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">sign up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-hover {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">sign in</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -73,18 +70,17 @@
         </div>
     </nav>
 
-
+    <!-- Main Content -->
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-end m-3">You are signed in as {{ user }}</p>
-        {% else %}
-        <p class="text-end m-3">You are not signed in</p>
+        {% if not user.is_authenticated %}
+        <div class="alert alert-warning text-center mt-3" role="alert">
+            <strong>Welcome!</strong> Sign up or sign in to participate in our latest polls.
+        </div>
         {% endif %}
 
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Your content goes here -->
         {% endblock content %}
-
     </main>
 
     <!-- Footer -->

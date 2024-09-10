@@ -29,9 +29,9 @@ body {
 
 .navbar {
     background-color: #0f0f0f;
-    background-image: url('/static/images/grain-texture.jpg'); /* Noise texture */
-    background-size: cover; /* Ensure the texture covers the entire background */
-    background-blend-mode: overlay; /* Blend the texture with the background color */
+    background-image: url('/static/images/grain-texture.jpg');
+    background-size: cover; 
+    background-blend-mode: overlay; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: sticky;
@@ -78,6 +78,37 @@ body {
     text-decoration: underline;
 }
 
+.dropdown-menu {
+    background-color: #f75067;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item {
+    color: white !important;
+    padding: 0.75rem 1.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background-color: transparent !important;
+    transform-origin: center;
+}
+
+.dropdown-item:hover {
+    color: #ffffff !important;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
+    background-color: transparent !important;
+    transform-origin: center;
+}
+
+
+/* Call to Action Alert */
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+}
+
 /* Card styling */
 
 .card {
@@ -100,10 +131,10 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
-    transform: translateY(-3px); /* Slight movement up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
     transition: all 0.3s ease;
-    cursor: pointer; /* Show pointer on hover */
+    cursor: pointer;
     background-color: #f1f1f1;
 }
 
@@ -335,9 +366,9 @@ body {
 
 .footer {
     background-color: #0f0f0f;
-    background-image: url('/static/images/grain-texture.jpg'); /* Noise texture */
-    background-size: cover; /* Ensure the texture covers the entire background */
-    background-blend-mode: overlay; /* Blend the texture with the background color */
+    background-image: url('/static/images/grain-texture.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
