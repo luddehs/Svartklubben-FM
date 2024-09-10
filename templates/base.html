@@ -32,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid nav-margin">
-            <a class="navbar-brand brand" href="{% url 'home' %}">Svartklubben FM</a>
+            <a class="navbar-brand brand" href="{% url 'home' %}">svartklubben fm</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,29 +40,29 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">Blog</a>
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" href="{% url 'home' %}">blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" href="{% url 'about' %}">about</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == polls_url %}active{% endif %}" href="{% url 'polls:index' %}">Polls</a>
+                        <a class="nav-link {% if request.path == polls_url %}active{% endif %}" href="{% url 'polls:index' %}">polls</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome, {{ user }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item text-center" href="{% url 'account_logout' %}">Sign Out</a></li>
+                            <li><a class="dropdown-item text-center" href="{% url 'account_logout' %}">sign out</a></li>
                         </ul>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">sign up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">sign in</a>
                     </li>
                     {% endif %}
                 </ul>
