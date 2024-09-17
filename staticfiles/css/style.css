@@ -30,6 +30,7 @@ body {
 }
 
 
+
 /* Navbar */
 
 .navbar {
@@ -61,7 +62,18 @@ body {
 }
 
 .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-link {
@@ -215,14 +227,14 @@ body {
 
 
 .text-link {
-    color: #007B3E; /* Darker green for better contrast */
+    color: #007B3E;
     text-decoration: none;
-    font-weight: 600; /* Make the text slightly bold */
+    font-weight: 600;
 }
 
 .text-link:hover,
 .text-link:active {
-    color: #005D2D; /* Even darker green for hover state */
+    color: #005D2D;
     text-decoration: underline;
 }
 
