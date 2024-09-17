@@ -21,61 +21,103 @@
           {% endblocktrans %}</p>
 
           <!-- Sign-up Form -->
-          <form id="signup_form" method="post" action="/accounts/signup/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="OwYSTUmNwcD89QbENa3JHcSIDaRMcIm0g38jqPyv8aMxVOk7DQ3ggO4eDwzIyn2X">
-            
+          <form id="signup_form" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+
+            <!-- Display Non-Field Errors -->
+            {% if form.non_field_errors %}
+            <div class="alert alert-danger">
+              {% for error in form.non_field_errors %}
+                <div>{{ error }}</div>
+              {% endfor %}
+            </div>
+            {% endif %}
+
             <!-- Username Field -->
             <div class="row px-4 mb-3 mt-4">
               <div class="col-md-4 col-12 text-md-start text-center">
-                <label for="id_username" class="form-label">Username</label>
+                <label for="id_username" class="form-label">{% trans "Username" %}</label>
               </div>
               <div class="col-md-8 col-12">
-                <input type="text" name="username" class="form-control" placeholder="Username" autocomplete="username" minlength="1" maxlength="150" required="" id="id_username">
+                <input type="text" name="username" class="form-control {% if form.username.errors %}is-invalid{% endif %}" placeholder="{% trans 'Username' %}" autocomplete="username" minlength="1" maxlength="150" required="" id="id_username">
+                <!-- Display Username Field Errors -->
+                {% if form.username.errors %}
+                <div class="invalid-feedback">
+                  {% for error in form.username.errors %}
+                  <div>{{ error }}</div>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
             </div>
 
             <!-- Email Field -->
             <div class="row px-4 mb-3">
               <div class="col-md-4 col-12 text-md-start text-center">
-                <label for="id_email" class="form-label">Email</label>
+                <label for="id_email" class="form-label">{% trans "Email" %}</label>
               </div>
               <div class="col-md-8 col-12">
-                <input type="email" name="email" class="form-control" placeholder="Email address" autocomplete="email" maxlength="320" id="id_email">
+                <input type="email" name="email" class="form-control {% if form.email.errors %}is-invalid{% endif %}" placeholder="{% trans 'Email address' %}" autocomplete="email" maxlength="320" id="id_email">
+                <!-- Display Email Field Errors -->
+                {% if form.email.errors %}
+                <div class="invalid-feedback">
+                  {% for error in form.email.errors %}
+                  <div>{{ error }}</div>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
             </div>
 
             <!-- Password Field -->
             <div class="row px-4 mb-3">
               <div class="col-md-4 col-12 text-md-start text-center">
-                <label for="id_password1" class="form-label">Password</label>
+                <label for="id_password1" class="form-label">{% trans "Password" %}</label>
               </div>
               <div class="col-md-8 col-12">
-                <input type="password" name="password1" class="form-control" placeholder="Password" autocomplete="new-password" required="" id="id_password1">
+                <input type="password" name="password1" class="form-control {% if form.password1.errors %}is-invalid{% endif %}" placeholder="{% trans 'Password' %}" autocomplete="new-password" required="" id="id_password1">
+                <!-- Display Password Field Errors -->
+                {% if form.password1.errors %}
+                <div class="invalid-feedback">
+                  {% for error in form.password1.errors %}
+                  <div>{{ error }}</div>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
             </div>
 
             <!-- Confirm Password Field -->
             <div class="row px-4 mb-4">
               <div class="col-md-4 col-12 text-md-start text-center">
-                <label for="id_password2" class="form-label">Confirm Password</label>
+                <label for="id_password2" class="form-label">{% trans "Confirm Password" %}</label>
               </div>
               <div class="col-md-8 col-12">
-                <input type="password" name="password2" class="form-control" placeholder="Password (again)" autocomplete="new-password" required="" id="id_password2">
+                <input type="password" name="password2" class="form-control {% if form.password2.errors %}is-invalid{% endif %}" placeholder="{% trans 'Password (again)' %}" autocomplete="new-password" required="" id="id_password2">
+                <!-- Display Confirm Password Field Errors -->
+                {% if form.password2.errors %}
+                <div class="invalid-feedback">
+                  {% for error in form.password2.errors %}
+                  <div>{{ error }}</div>
+                  {% endfor %}
+                </div>
+                {% endif %}
               </div>
             </div>
 
             <!-- Sign-up Button -->
             <div class="text-center pt-3">
-              <button class="btn btn-style" type="submit">
-                Sign Up »
-              </button>
+              <button class="btn btn-style" type="submit">{% trans "Sign Up »" %}</button>
             </div>
           </form>
         </div>
-        
+
         <!-- Card Footer -->
         <div class="card-footer text-center p-3">
-          <small class="text-muted">{% trans "Already have an account?" %} <a href="{{ login_url }}" class="text-link">{% trans "Sign In" %}</a></small>
+          <small class="text-muted">
+            {% trans "Already have an account?" %} 
+            <a href="{{ login_url }}" class="text-link">{% trans "Sign In" %}</a>
+          </small>
         </div>
       </div>
     </div>
