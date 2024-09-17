@@ -5,24 +5,36 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign Out" %}</h3>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10">
+      <!-- Sign-out Card -->
+      <div class="card shadow-sm">
+        <div class="card-header bg-white text-dark text-center">
+          <h3 class="mb-0">{% trans "Are you sure you want to sign out?" %}</h3>
+        </div>
+        <div class="card-body p-5 text-center">
 
-      <p>{% trans 'Are you sure you want to sign out?' %}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+          <!-- Sign-out Form -->
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
 
-      <form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-style right" type="submit">{% trans 'Sign Out' %}</button>
-      </form>
+            <!-- Sign-out Button -->
+            <button class="btn btn-style" type="submit">{% trans 'Sign Out »' %}</button>
+          </form>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer text-center p-3">
+          <small class="text-muted">
+            {% trans "Changed your mind?" %}
+            <a href="{% url 'home' %}" class="text-link">{% trans "Go back" %}</a>
+          </small>
+        </div>
+      </div>
     </div>
   </div>
 </div>
