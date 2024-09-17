@@ -25,6 +25,11 @@ body {
     background-color: #ffffff;
 }
 
+.brand-green-bg {
+    background-color: #00bd67
+}
+
+
 /* Navbar */
 
 .navbar {
@@ -209,14 +214,15 @@ body {
 }
 
 
-.link {
-    color: #f75067;
+.text-link {
+    color: #007B3E;
     text-decoration: none;
+    font-weight: 600;
 }
 
-.link:hover,
-.link:active {
-    color: #00bd67;
+.text-link:hover,
+.text-link:active {
+    color: #005D2D;
     text-decoration: underline;
 }
 
