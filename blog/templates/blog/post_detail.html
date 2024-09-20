@@ -1,40 +1,37 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 {% load static %}
 
-<div class="masthead">
+<!-- Hero Section -->
+<div class="hero-section position-relative text-center py-5" style="background-color: #f4f4f4;">
     <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post creation goes in the p tag -->
-                <p class="post-subtitle">{{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/fyrplats-vinter.png' %}" class="scale"
-                alt="placeholder image">
-                {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale"
-                alt="{{ post.title }}">
-                {% endif %}
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="hero-image-wrapper">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="{% static 'images/fyrplats-vinter.png' %}" class="img-fluid rounded shadow-lg mx-auto d-block" alt="Placeholder Image">
+                    {% else %}
+                    <img src="{{ post.featured_image.url }}" class="img-fluid rounded shadow-lg mx-auto d-block" alt="{{ post.title }}">
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
+<!-- Main Content -->
+<div class="container my-5">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top shadow-sm">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
-                    {{ post.content | safe }}
-                </p>
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card shadow-sm p-4">
+                <div class="card-body">
+                    <!-- Post title goes in these h1 tags -->
+                    <h1 class="card-title display-4 text-center">{{ post.title }}</h1>
+                    <!-- Post creation goes in the p tag -->
+                    <p class="card-subtitle text-center text-muted mb-4">{{ post.created_on|date:"F j, Y" }}</p>
+                    <p class="card-text">{{ post.content | safe }}</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 {% endblock content %}

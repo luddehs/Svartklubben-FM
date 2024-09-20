@@ -29,8 +29,6 @@ body {
     background-color: #00bd67
 }
 
-
-
 /* Navbar */
 
 .navbar {
@@ -178,34 +176,6 @@ body {
     text-transform: uppercase;
 }
 
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #282929;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    background: #282929;
-    z-index: 100;
-}
-
 .post-link {
     text-decoration: none;
     color: #282929;
@@ -213,18 +183,6 @@ body {
 
 .post-link:hover {
     color: #00bd67;
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: #d3d3d3;
-}
-
 
 .text-link {
     color: #007B3E;
@@ -317,6 +275,21 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+/* Blog Detail Page */
+
+.hero-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Polls Page */
