@@ -159,7 +159,7 @@ User authentication is handled by Django AllAuth, with a custom polls model enab
 
 
 ## Testing
-Due to time constraints, all testing will be included in the next version of the README.
+Testing and results can be found [here](/TESTING.md)
 
 ## Security Features and Defensive Design
 
