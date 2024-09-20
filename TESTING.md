@@ -33,3 +33,9 @@
 ### HTML
 
 All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/). See results in below table.
+
+| Page                 | Logged Out | Logged In |
+|----------------------|------------|-----------|
+| base.html            | No errors  | No errors |
+| blog/index.html      | No errors  | No errors |
+| post_detail.html     | Note 1     | Note 1    |
