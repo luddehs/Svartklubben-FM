@@ -44,3 +44,10 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | polls/detail.html      |    N/A     | No errors |
 | polls/results.html     |    N/A     | No errors |
 | polls/delete.html      |    N/A     | No errors |
+| signup.html            | No errors  |   N/A     |
+| login.html             | No errors  |   N/A     |
+| logout.html            |    N/A     | No errors |
+| 400.html               | No errors  | No errors |
+| 403.html               | No errors  | No errors |
+| 404.html               | No errors  | No errors |
+| 500.html               | No errors  | No errors |
