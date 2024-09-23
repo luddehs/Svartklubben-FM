@@ -43,3 +43,4 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | polls/index.html       |    N/A     | No errors |
 | polls/detail.html      |    N/A     | No errors |
 | polls/results.html     |    N/A     | No errors |
+| polls/delete.html      |    N/A     | No errors |
