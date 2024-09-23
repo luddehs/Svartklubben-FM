@@ -29,7 +29,7 @@
                     <h1 class="card-title display-4 text-center">{{ post.title }}</h1>
                     <!-- Post creation goes in the p tag -->
                     <p class="card-subtitle text-center text-muted mb-4">{{ post.created_on|date:"F j, Y" }}</p>
-                    <p class="card-text">{{ post.content | safe }}</p>
+                    <div class="card-text">{{ post.content | safe }}</div>
                 </div>
             </div>
         </div>

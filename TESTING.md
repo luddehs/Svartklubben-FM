@@ -39,3 +39,4 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | base.html            | No errors  | No errors |
 | blog/index.html      | No errors  | No errors |
 | post_detail.html     | Note 1     | Note 1    |
+| about.html           | No errors  | No errors |
