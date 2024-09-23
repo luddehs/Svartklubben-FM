@@ -38,6 +38,6 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 |----------------------|------------|-----------|
 | base.html            | No errors  | No errors |
 | blog/index.html      | No errors  | No errors |
-| post_detail.html     | Note 1     | Note 1    |
+| post_detail.html     | No errors  | No errors |
 | about.html           | No errors  | No errors |
-
+| polls/index.html     |    N/A     | No errors |
