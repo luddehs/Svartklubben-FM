@@ -26,10 +26,10 @@
             <div class="card shadow-sm p-4">
                 <div class="card-body">
                     <!-- Post title goes in these h1 tags -->
-                    <h1 class="card-title display-4 text-center">{{ post.title }}</h1>
+                    <h1 class="card-title display-4 text-dark text-center">{{ post.title }}</h1>
                     <!-- Post creation goes in the p tag -->
                     <p class="card-subtitle text-center text-muted mb-4">{{ post.created_on|date:"F j, Y" }}</p>
-                    <div class="card-text">{{ post.content | safe }}</div>
+                    <div class="card-text post-link text-dark">{{ post.content | safe }}</div>
                 </div>
             </div>
         </div>

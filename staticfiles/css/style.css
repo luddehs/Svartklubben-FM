@@ -176,13 +176,18 @@ body {
     text-transform: uppercase;
 }
 
-.post-link {
+.post-link a {
+    color: #212529;
     text-decoration: none;
-    color: #282929;
+    font-size: 1.25rem;
+    font-weight: bold;
+    
 }
 
-.post-link:hover {
-    color: #00bd67;
+.post-link a:hover {
+    color: #00bd67 !important;
+    transition: all 0.3s ease;
+    text-decoration: underline;
 }
 
 .text-link {
