@@ -61,3 +61,13 @@ No errors were found when passing my CSS file through the official [W3C CSS Vali
 
 ![CSS Validation](docs/readme_images/css_validation.png)
  </details>
+
+### Javascript
+No errors were found when passing my javascript through [Jshint](https://jshint.com/) 
+
+<details>
+
+<summary>Jshint</summary>
+
+![Jshint](docs/readme_images/jshint_validation.png)
+</details>
