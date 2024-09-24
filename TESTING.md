@@ -51,3 +51,13 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 | 403.html               | No errors  | No errors |
 | 404.html               | No errors  | No errors |
 | 500.html               | No errors  | No errors |
+
+### CSS
+No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+ <details>
+
+ <summary>CSS</summary>
+
+![CSS Validation](docs/readme_images/css_validation.png)
+ </details>
