@@ -209,13 +209,15 @@ body {
     text-transform: uppercase;
 }
 
-.post-link {
+.post-link a {
     text-decoration: none;
     color: #282929;
+    font-size: 1.5rem;
 }
 
-.post-link:hover {
+.post-link:hover a {
     color: #00bd67;
+    text-decoration: underline;
 }
 
 .text-link {
