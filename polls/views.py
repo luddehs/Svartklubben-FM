@@ -61,7 +61,10 @@ def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
-        user_vote, created = ChoiceVote.objects.get_or_create(choice=selected_choice)
+        user_vote, created = (
+            ChoiceVote.objects
+            .get_or_create(choice=selected_choice)
+        )
 
         vote_changed = False
 
@@ -72,11 +75,15 @@ def vote(request, question_id):
             selected_choice.save()
         else:
             messages.info(request, "You have already voted for this choice.")
-            return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+        return HttpResponseRedirect(
+            reverse("polls:results", args=(question.id,))
+        )
 
         previous_votes = ChoiceVote.objects.filter(choice__question=question)
         for vote in previous_votes:
-            if vote.choice != selected_choice and request.user in vote.users.all():
+            if (vote.choice != selected_choice and
+                    request.user in vote.users.all()):
+
                 vote.users.remove(request.user)
                 vote.choice.votes -= 1
                 vote.save()
@@ -84,14 +91,21 @@ def vote(request, question_id):
                 vote_changed = True
 
         if vote_changed:
-            messages.success(request, "Your vote has been updated to the new choice.")
+            messages.success(
+                request,
+                "Your vote has been updated to the new choice."
+            )
+
         else:
             messages.success(request, "Your vote was successfully submitted.")
 
-        return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
+        url = reverse("polls:results", args=(question.id,))
+        return HttpResponseRedirect(url)
 
     except (KeyError, Choice.DoesNotExist):
-        messages.error(request, "You didn't select a valid choice. Please try again.")
+        error_message = "You didn't select a valid choice. Please try again."
+        messages.error(request, error_message)
+
         return render(
             request,
             "polls/detail.html",
