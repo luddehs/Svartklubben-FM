@@ -31,7 +31,7 @@ class DetailView(LoginRequiredMixin, generic.DetailView):
         Excludes any questions that aren't published yet.
         """
         return Question.objects.filter(pub_date__lte=timezone.now())
-    
+
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(**kwargs)
         try:
@@ -52,7 +52,7 @@ def vote(request, question_id):
     try:
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
         user_vote, created = ChoiceVote.objects.get_or_create(choice=selected_choice)
-        
+
         vote_changed = False
 
         if request.user not in user_vote.users.all():
@@ -71,7 +71,7 @@ def vote(request, question_id):
                 vote.choice.votes -= 1
                 vote.save()
                 vote.choice.save()
-                vote_changed = True 
+                vote_changed = True
 
         if vote_changed:
             messages.success(request, "Your vote has been updated to the new choice.")
@@ -79,7 +79,7 @@ def vote(request, question_id):
             messages.success(request, "Your vote was successfully submitted.")
 
         return HttpResponseRedirect(reverse("polls:results", args=(question.id,)))
-    
+
     except (KeyError, Choice.DoesNotExist):
         messages.error(request, "You didn't select a valid choice. Please try again.")
         return render(
@@ -106,7 +106,6 @@ def delete_vote(request, question_id):
             return HttpResponseRedirect(reverse("polls:detail", args=(question.id,)))
     except ChoiceVote.DoesNotExist:
         messages.error(request, "You have not voted on this question.")
-    
     return render(request, "polls/delete.html",
                 {
                     "question": question,
