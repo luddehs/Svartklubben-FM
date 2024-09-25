@@ -39,10 +39,16 @@ class DetailView(LoginRequiredMixin, generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super(DetailView, self).get_context_data(**kwargs)
         try:
-            context['vote'] = ChoiceVote.objects.get(users__in=[self.request.user], choice__question=self.get_object())
+            context['vote'] = (
+                ChoiceVote.objects
+                .get(users__in=[self.request.user],
+                     choice__question=self.get_object())
+            )
+
         except ChoiceVote.DoesNotExist:
             pass
         return context
+
 
 
 class ResultsView(LoginRequiredMixin, generic.DetailView):
