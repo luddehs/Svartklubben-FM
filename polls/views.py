@@ -103,13 +103,18 @@ def delete_vote(request, question_id):
             vote.save()
             vote.choice.save()
             messages.success(request, "Your vote has been successfully deleted.")
-            return HttpResponseRedirect(reverse("polls:detail", args=(question.id,)))
+            return HttpResponseRedirect(
+                reverse("polls:detail", args=(question.id,))
+            )
     except ChoiceVote.DoesNotExist:
         messages.error(request, "You have not voted on this question.")
-    return render(request, "polls/delete.html",
-                {
-                    "question": question,
-                    "vote": vote,
-                    "error_message": "You didn't select a choice.",
-                },
+
+    return render(
+        request,
+        "polls/delete.html",
+        {
+            "question": question,
+            "vote": vote,
+            "error_message": "You didn't select a choice.",
+        },
     )
