@@ -50,7 +50,6 @@ class DetailView(LoginRequiredMixin, generic.DetailView):
         return context
 
 
-
 class ResultsView(LoginRequiredMixin, generic.DetailView):
     model = Question
     template_name = "polls/results.html"
@@ -120,13 +119,21 @@ def vote(request, question_id):
 def delete_vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     try:
-        vote = ChoiceVote.objects.get(users__in=[request.user], choice__question=question)
+        vote = ChoiceVote.objects.get(
+            users__in=[request.user],
+            choice__question=question
+        )
+
         if request.POST:
             vote.users.remove(request.user)
             vote.choice.votes -= 1
             vote.save()
             vote.choice.save()
-            messages.success(request, "Your vote has been successfully deleted.")
+            messages.success(
+                request,
+                "Your vote has been successfully deleted."
+            )
+
             return HttpResponseRedirect(
                 reverse("polls:detail", args=(question.id,))
             )
