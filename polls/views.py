@@ -11,6 +11,10 @@ from .models import Choice, Question, ChoiceVote
 
 
 class IndexView(LoginRequiredMixin, generic.ListView):
+    """
+    Displays a list of the latest poll questions related to :model:`Question`.
+    This view retrieves the last ten published questions for logged-in users.
+    """
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 
@@ -27,6 +31,11 @@ class IndexView(LoginRequiredMixin, generic.ListView):
 
 
 class DetailView(LoginRequiredMixin, generic.DetailView):
+    """
+    Displays the details of a poll question related to :model:`Question`.
+    This view shows the question and its available choices for logged-in users,
+    excluding unpublished questions.
+    """
     model = Question
     template_name = "polls/detail.html"
 
@@ -51,12 +60,22 @@ class DetailView(LoginRequiredMixin, generic.DetailView):
 
 
 class ResultsView(LoginRequiredMixin, generic.DetailView):
+    """
+    Displays the results of a poll question related to :model:`Question`.
+    This view shows the results of a specific question for logged-in users.
+    """
     model = Question
     template_name = "polls/results.html"
 
 
 @login_required
 def vote(request, question_id):
+    """
+    Processes a user's vote for a poll question related to :model:`Question`
+    and :model:`ChoiceVote`.
+    This view handles voting logic, including adding or changing a vote for a
+    choice and providing feedback to the user.
+    """
     question = get_object_or_404(Question, pk=question_id)
     try:
         selected_choice = question.choice_set.get(pk=request.POST["choice"])
@@ -117,6 +136,11 @@ def vote(request, question_id):
 
 @login_required
 def delete_vote(request, question_id):
+    """
+    Deletes a user's vote for a poll question related to :model:`Question`
+    and :model:`ChoiceVote`.
+    This view allows users to remove their vote for a particular question.
+    """
     question = get_object_or_404(Question, pk=question_id)
     try:
         vote = ChoiceVote.objects.get(
