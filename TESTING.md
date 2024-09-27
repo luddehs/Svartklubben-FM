@@ -74,3 +74,35 @@ No errors were found when passing my javascript through [Jshint](https://jshint.
 
 ### Python
 All Python files were run through [Pep8](http://pep8online.com/) with no errors found.
+
+### Lighthouse
+
+Lighthouse validation was run on all pages (for both mobile and desktop versions) to assess accessibility and performance.
+
+| Page                  | Performance  | Accessibility | Best Practices  | SEO |
+|-----------------------|:------------:|:-------------:|:---------------:|:---:|
+|                       |              |               |                 |     |
+| Desktop               |              |               |                 |     |
+| base.html             |            0 |             0 |               0 |   0 |
+| blog/index.html       |            0 |             0 |               0 |   0 |
+| blog/post_detail.html |            0 |             0 |               0 |   0 |
+| polls/index.html      |            0 |             0 |               0 |   0 |
+| polls/detail.html     |            0 |             0 |               0 |   0 |
+| polls/results.html    |            0 |             0 |               0 |   0 |
+| polls/delete.html     |            0 |             0 |               0 |   0 |
+| signup.html           |            0 |             0 |               0 |   0 |
+| login.html            |            0 |             0 |               0 |   0 |
+| logout.html           |            0 |             0 |               0 |   0 |
+|                       |              |               |                 |     |
+| Mobile                |              |               |                 |     |
+| base.html             |            0 |             0 |               0 |   0 |
+| blog/index.html       |            0 |             0 |               0 |   0 |
+| blog/post_detail.html |            0 |             0 |               0 |   0 |
+| polls/index.html      |            0 |             0 |               0 |   0 |
+| polls/detail.html     |            0 |             0 |               0 |   0 |
+| polls/results.html    |            0 |             0 |               0 |   0 |
+| polls/delete.html     |            0 |             0 |               0 |   0 |
+| signup.html           |            0 |             0 |               0 |   0 |
+| login.html            |            0 |             0 |               0 |   0 |
+| logout.html           |            0 |             0 |               0 |   0 |
+|                       |              |               |                 |     |

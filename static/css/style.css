@@ -33,9 +33,7 @@ body {
 
 .navbar {
     background-color: #0f0f0f;
-    background-image: url('/static/images/grain-texture.jpg');
     background-size: cover; 
-    background-blend-mode: overlay; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: sticky;
