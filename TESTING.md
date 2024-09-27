@@ -2,8 +2,6 @@
 - [User Story Testing](#user-story-testing)
 - [Validator Testing](#validator-testing)
   * [HTML](#html)
-    + [Fixed Errors](#fixed-errors)
-    + [Unfixed Errors](#unfixed-errors)
   * [CSS](#css)
   * [Javascript](#javascript)
   * [Python](#python)
@@ -13,22 +11,20 @@
 - [Manual Testing](#manual-testing)
   * [Site Navigation](#site-navigation)
   * [Home Page](#home-page)
-  * [](#)
-  * [](#r)
-  * [](#)
-  * [](#)
-  * [](#)
-  * [](#)
-  * [](#)
+  * [Blog Detail Page](#blog-detail-page)
+  * [About Page](#about-page)
+  * [Polls Index Page](#polls-index-page)
+  * [Polls Detail Page](#polls-detail-page)
+  * [Polls Results Page](#polls-results-page)
+  * [Polls Delete Page](#polls-delete-page)
   * [Django All Auth Pages](#django-all-auth-pages)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
-    + [](#)
-    + [](#)
-  * [Unfixed bugs:](#unfixed-bugs-)¨
+  * [Unfixed bugs](#unfixed-bugs)
 
+## User Story Testing
 
-  ## Validator Testing
+## Validator Testing
 
 ### HTML
 
@@ -86,6 +82,7 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | base.html             |            0 |             0 |               0 |   0 |
 | blog/index.html       |            0 |             0 |               0 |   0 |
 | blog/post_detail.html |            0 |             0 |               0 |   0 |
+| about.html            |            0 |             0 |               0 |   0 |
 | polls/index.html      |            0 |             0 |               0 |   0 |
 | polls/detail.html     |            0 |             0 |               0 |   0 |
 | polls/results.html    |            0 |             0 |               0 |   0 |
@@ -98,6 +95,7 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | base.html             |            0 |             0 |               0 |   0 |
 | blog/index.html       |            0 |             0 |               0 |   0 |
 | blog/post_detail.html |            0 |             0 |               0 |   0 |
+| about.html            |            0 |             0 |               0 |   0 |
 | polls/index.html      |            0 |             0 |               0 |   0 |
 | polls/detail.html     |            0 |             0 |               0 |   0 |
 | polls/results.html    |            0 |             0 |               0 |   0 |
@@ -105,4 +103,81 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | signup.html           |            0 |             0 |               0 |   0 |
 | login.html            |            0 |             0 |               0 |   0 |
 | logout.html           |            0 |             0 |               0 |   0 |
-|                       |              |               |                 |     |
+
+## Browser Testing
+- The website was tested on Google Chrome, Firefox, and Safari browsers, with no issues detected.
+
+## Device Testing
+- The website was tested on a range of devices, including desktop, laptop, tablet, and mobile, to verify responsiveness across different screen sizes in both portrait and landscape modes. It functioned as expected. Additionally, the responsive design was reviewed using Chrome Developer Tools across multiple device simulations, with the structural integrity remaining consistent for all sizes.
+
+## Manual Testing
+
+### Site Navigation
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+|                       |            |                                                                    |           |
+|                       |            |                                                                    |           |
+|                       |            |                                                                    |           |
+
+### Home Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Blog Detail Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### About Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Polls Index Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Polls Detail Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Polls Results Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Polls Delete Page
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+### Django All Auth Pages
+| Element               | Action  | Expected Result                 | Pass/Fail |
+|-----------------------|---------|---------------------------------|-----------|
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+|                       |         |                                 |           |
+
+## Bugs 
+
+### Fixed Bugs
+
+### Unfixed bugs:
+There are no known unfixed bugs. 
