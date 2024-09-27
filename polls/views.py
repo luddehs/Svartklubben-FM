@@ -71,10 +71,25 @@ class ResultsView(LoginRequiredMixin, generic.DetailView):
 @login_required
 def vote(request, question_id):
     """
-    Processes a user's vote for a poll question related to :model:`Question`
-    and :model:`ChoiceVote`.
-    This view handles voting logic, including adding or changing a vote for a
-    choice and providing feedback to the user.
+    Processes a user's vote for a question related to :model:`polls.Question`
+    and :model:`polls.ChoiceVote`.
+    This view handles the logic for voting, including adding or changing a vote
+    for a specific choice and providing appropriate feedback to the user.
+    It updates the vote count and either informs the user of a successful vote
+    or an already existing vote.
+
+    **Context**
+    ``question``
+         The specific instance of :model:`polls.Question`
+         identified by the `question_id`.
+    ``selected_choice``
+         The specific instance of :model:`polls.Choice`
+         the user selected to vote for.
+    ``user_vote``
+         The :model:`polls.ChoiceVote` instance representing
+         the user's vote for the selected choice.
+    **Template:**
+    :template:`polls/detail.html`
     """
     question = get_object_or_404(Question, pk=question_id)
     try:
@@ -137,9 +152,21 @@ def vote(request, question_id):
 @login_required
 def delete_vote(request, question_id):
     """
-    Deletes a user's vote for a poll question related to :model:`Question`
-    and :model:`ChoiceVote`.
-    This view allows users to remove their vote for a particular question.
+    Deletes a user's vote for a question related to :model:`polls.Question`
+    and :model:`polls.ChoiceVote`.
+    This view allows users to remove their vote for a particular
+    and updates the vote count for the associated choice.
+    If the user has not voted on the question, an error message is displayed.
+
+    **Context**
+    ``question``
+         The instance of :model:`polls.Question` identified by `question_id`.
+    ``vote``
+         The instance of :model:`polls.ChoiceVote`
+         representing the user's vote on the question.
+         If the user hasn't voted, this variable will not exist.
+    **Template:**
+    :template:`polls/delete.html`
     """
     question = get_object_or_404(Question, pk=question_id)
     try:

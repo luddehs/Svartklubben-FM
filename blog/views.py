@@ -6,7 +6,7 @@ from .models import Post
 class PostList(generic.ListView):
     """
     Displays a list of published blog posts related to :model:`Post`.
-    This view retrieves all posts with a status of 'Published'
+    This view retrieves all posts with a status of 'Published' (status=1)
     and renders them in the specified template with pagination.
     """
     queryset = Post.objects.filter(status=1)
@@ -17,8 +17,14 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     """
     Displays the details of a single published post related to :model:`Post`.
-    This view retrieves a specific blog post by its slug,
-    ensuring it is published before rendering the detail template.
+    This view retrieves a specific blog post by its slug, ensuring it is
+    published before rendering the detail template.
+
+    **Context**
+    ``post``
+         The specific instance of :model:`blog.Post` identified by the slug.
+    **Template:**
+    :template:`blog/post_detail.html`
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
