@@ -18,7 +18,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #282929;
+    background-color: #181818;
 }
 
 .main-bg {
@@ -32,10 +32,8 @@ body {
 /* Navbar */
 
 .navbar {
-    background-color: #0f0f0f;
-    background-image: url('/static/images/grain-texture.jpg');
+    background-color: #181818;
     background-size: cover; 
-    background-blend-mode: overlay; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: sticky;
@@ -331,7 +329,6 @@ body {
 /* Polls Page */
 .polls-header {
     background-color: #00bd67;
-    background-image: url("{% static 'images/polls-bg.jpg' %}"); /* Add background image */
     background-size: cover;
     background-position: center;
     color: white;
@@ -392,8 +389,7 @@ body {
 /* Footer */
 
 .footer {
-    background-color: #0f0f0f;
-    background-image: url('/static/images/grain-texture.jpg');
+    background-color: #181818;
     background-size: cover;
     background-blend-mode: overlay;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
