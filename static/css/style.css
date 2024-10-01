@@ -26,7 +26,7 @@ body {
 }
 
 .brand-green-bg {
-    background-color: #00bd67
+    background-color: #00af60
 }
 
 /* Navbar */
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #00bd67 !important;
+    color: #00af60 !important;
 }
 
 .navbar-toggler {
@@ -80,12 +80,12 @@ body {
 }
 
 .nav-link.active {
-    color: #00bd67 !important;
+    color: #00af60 !important;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #00bd67 !important;
+    color: #00af60 !important;
     transform: scale(1.1);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     text-decoration: underline;
@@ -173,7 +173,7 @@ body {
 
 .card-link:hover {
     text-decoration: none;
-    color: #00bd67;
+    color: #00af60;
 }
 
 .card-blog:hover {
@@ -204,7 +204,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color:#00bd67
+    background-color:#00af60
 }
 
 .scale {
@@ -225,7 +225,7 @@ body {
 }
 
 .post-link:hover a {
-    color: #00bd67;
+    color: #00af60;
     text-decoration: underline;
 }
 
@@ -244,7 +244,7 @@ body {
 /* Buttons */
 
 .btn-style {
-    background-color: #00bd67;
+    background-color: #00af60;
     color: #fff;
     border-radius: 20px;
     padding: 0.5rem 1rem;
@@ -254,20 +254,20 @@ body {
 
 .btn-style:hover {
     background-color: #fff;
-    color: #00bd67;
-    border: 1px solid #00bd67;
+    color: #00af60;
+    border: 1px solid #00af60;
 }
 
 .btn-style,
 .btn-edit {
-    background-color: #00bd67;
+    background-color: #00af60;
     color: #fff;
 }
 
 .btn-style:hover,
 .btn-style:active {
     background-color: #fff;
-    color: #00bd67;
+    color: #00af60;
 }
 
 .btn-delete {
@@ -286,14 +286,14 @@ body {
 }
 
 .btn-like {
-    color: #00bd67;
+    color: #00af60;
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #00bd67;
+    color: #00af60;
     background: transparent;
     border: none;
 }
@@ -339,7 +339,7 @@ body {
 
 /* Polls Page */
 .polls-header {
-    background-color: #00bd67;
+    background-color: #00af60;
     background-size: cover;
     background-position: center;
     color: white;
@@ -411,7 +411,7 @@ body {
 }
 
 .footer a i:hover {
-    color: #00bd67 !important;
+    color: #00af60 !important;
     transform: scale(1.2);
 }
 
@@ -459,7 +459,7 @@ body {
     }
     
     .navbar-nav .nav-link:hover {
-        color: #00bd67 !important;
+        color: #00af60 !important;
         transform: scale(1.05);
     }
 }
