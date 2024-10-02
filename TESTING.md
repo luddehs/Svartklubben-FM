@@ -73,36 +73,36 @@ All Python files were run through [Pep8](http://pep8online.com/) with no errors 
 
 ### Lighthouse
 
-Lighthouse validation was run on all pages (for both mobile and desktop versions) to assess accessibility and performance.
+Lighthouse validation was run on all pages (for both mobile and desktop versions) to assess accessibility and performance. 
 
 | Page                  | Performance  | Accessibility | Best Practices  | SEO |
 |-----------------------|:------------:|:-------------:|:---------------:|:---:|
 |                       |              |               |                 |     |
 | Desktop               |              |               |                 |     |
-| base.html             |            0 |             0 |               0 |   0 |
-| blog/index.html       |            0 |             0 |               0 |   0 |
-| blog/post_detail.html |            0 |             0 |               0 |   0 |
-| about.html            |            0 |             0 |               0 |   0 |
-| polls/index.html      |            0 |             0 |               0 |   0 |
-| polls/detail.html     |            0 |             0 |               0 |   0 |
-| polls/results.html    |            0 |             0 |               0 |   0 |
-| polls/delete.html     |            0 |             0 |               0 |   0 |
-| signup.html           |            0 |             0 |               0 |   0 |
-| login.html            |            0 |             0 |               0 |   0 |
-| logout.html           |            0 |             0 |               0 |   0 |
+| base.html             |           95 |           100 |             100 | 100 |
+| blog/index.html       |           95 |           100 |             100 | 100 |
+| blog/post_detail.html |          100 |           100 |             100 | 100 |
+| about.html            |           98 |           100 |             100 | 100 |
+| polls/index.html      |           97 |            95 |             100 | 100 |
+| polls/detail.html     |           99 |           100 |             100 | 100 |
+| polls/results.html    |          100 |           100 |             100 | 100 |
+| polls/delete.html     |           93 |           100 |             100 | 100 |
+| signup.html           |          100 |            96 |             100 | 100 |
+| login.html            |           99 |            96 |             100 | 100 |
+| logout.html           |           95 |            96 |             100 | 100 |
 |                       |              |               |                 |     |
 | Mobile                |              |               |                 |     |
-| base.html             |            0 |             0 |               0 |   0 |
-| blog/index.html       |            0 |             0 |               0 |   0 |
-| blog/post_detail.html |            0 |             0 |               0 |   0 |
-| about.html            |            0 |             0 |               0 |   0 |
-| polls/index.html      |            0 |             0 |               0 |   0 |
-| polls/detail.html     |            0 |             0 |               0 |   0 |
-| polls/results.html    |            0 |             0 |               0 |   0 |
-| polls/delete.html     |            0 |             0 |               0 |   0 |
-| signup.html           |            0 |             0 |               0 |   0 |
-| login.html            |            0 |             0 |               0 |   0 |
-| logout.html           |            0 |             0 |               0 |   0 |
+| base.html             |           76 |           100 |             100 | 100 |
+| blog/index.html       |           76 |           100 |             100 | 100 |
+| blog/post_detail.html |           93 |            96 |             100 | 100 |
+| about.html            |           80 |           100 |             100 | 100 |
+| polls/index.html      |           86 |            95 |             100 | 100 |
+| polls/detail.html     |           91 |           100 |             100 | 100 |
+| polls/results.html    |           93 |           100 |             100 | 100 |
+| polls/delete.html     |           97 |           100 |             100 | 100 |
+| signup.html           |           91 |            96 |             100 | 100 |
+| login.html            |           87 |            96 |             100 | 100 |
+| logout.html           |           92 |            96 |             100 | 100 |
 
 ## Browser Testing
 - The website was tested on Google Chrome, Firefox, and Safari browsers, with no issues detected.
