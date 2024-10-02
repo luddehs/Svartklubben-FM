@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import sys
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 if os.path.isfile('env.py'):
     import env
 
@@ -28,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-luddehs-svartklubbenfm-y9ukgyu5qg0.ws.codeinstitute-ide.net',
@@ -109,6 +112,12 @@ DATABASES = {
 
 # if 'test' in sys.argv:
 #     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+MEDIA_URL = '/media/'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.ws.codeinstitute-ide.net",
