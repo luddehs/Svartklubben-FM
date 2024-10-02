@@ -254,7 +254,7 @@ body {
 }
 
 .btn-delete {
-    background-color: #f75067;
+    background-color: #181818;
     color: #fff;
     border-radius: 20px;
     padding: 0.5rem 1rem;
@@ -263,9 +263,8 @@ body {
 }
 
 .btn-delete:hover {
-    background-color: #fff;
-    color: #f75067;
-    border: 1px solid #f75067;
+    background-color: #f75067;
+    color: #fff;
 }
 
 .btn-like {
