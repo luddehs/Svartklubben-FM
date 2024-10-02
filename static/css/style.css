@@ -388,6 +388,14 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
 .footer a i {
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -403,8 +411,8 @@ body {
 
 @media (max-width: 1200px) {
     .image-container {
-        max-width: 800ppx;
-        max-height: 800ppx;
+        max-width: 800px;
+        max-height: 800px;
     }
 }
 
