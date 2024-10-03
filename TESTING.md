@@ -100,8 +100,8 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | polls/detail.html     |           91 |           100 |             100 | 100 |
 | polls/results.html    |           93 |           100 |             100 | 100 |
 | polls/delete.html     |           97 |           100 |             100 | 100 |
-| signup.html           |           91 |            96 |             100 | 100 |
-| login.html            |           87 |            96 |             100 | 100 |
+| signup.html           |           95 |            96 |             100 | 100 |
+| login.html            |           92 |            96 |             100 | 100 |
 | logout.html           |           92 |            96 |             100 | 100 |
 
 ## Browser Testing
