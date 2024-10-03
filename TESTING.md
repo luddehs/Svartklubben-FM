@@ -24,6 +24,102 @@
 
 ## User Story Testing
 
+### EPIC | User Navigation
+
+
+
+**Site Navigation**
+
+ *As a site user I can naturally navigate around the site so that I can easily find the content I am looking for.*
+
+- A Navbar should be visible on all pages, allowing the user to navigate to each section of the website.
+- The title should support a link leading the user back to the landing page.
+- There should be an "About" page providing information about the website.
+- The navbar should display the options to register or login.
+- Social media links should be present in a footer on all pages for easy access to the website's social media profiles.
+
+ <details>
+
+ <summary>Navigation Bar</summary>
+
+![Navigation Bar](docs/readme_images/navbar-so.png)
+</details>
+<details>
+
+ <summary>Footer</summary>
+
+![Footer](docs/readme_images/footer.png)
+</details>
+
+<br/>
+
+**Select and View Blogposts**
+
+*As a site user I can view blog posts containing various content formats so that I can easily discover and listen to curated music selections.*
+
+- Users should be able to click on a blogpost to enlarge it and view the content. The detailed view should include extended descriptions, and any other relevant information.
+- Each blog post must have its own section that includes a title, an image (optional), a short description, and contain a clickable link that redirects the user to the corresponding source. The link should be clearly visible and easy to interact with.
+- The blog posts should be designed to be responsive and look good on various devices, including desktops, tablets, and smartphones. Ensure that the layout adjusts to different screen sizes.
+
+ <details>
+
+ <summary>Blog Posts</summary>
+
+![Blog Posts](docs/readme_images/blog-index.png)
+</details>
+<details>
+
+ <summary>Post Detail</summary>
+
+![Post Detail](docs/readme_images/post-detail.png)
+</details>
+
+<br/>
+
+### EPIC | User Navigation
+
+**Session Management**
+
+*As a site administrator I can remain signed in across different pages until I choose to sign out or my session expires so that I can manage the site efficiently without needing to sign in repeatedly.*
+
+- Persistent login should keep the site administrator signed in across different pages until they manually sign out or the session expires.
+- Signing out should securely end the session and redirect the site administrator to a designated sign-out confirmation page or the home page.
+- All user actions must be secure and protect against unauthorized access.
+
+<br/>
+
+**Super User Sign In**
+
+*As a site administrator I can sign in using a secure authentication method so that I can access the admin dashboard and manage the site effectively.*
+
+- The sign-in page should have fields for the administrator to enter their username and password.
+- The sign-in process should validate the administrator's credentials against the user database.
+- After successful sign-in, the administrator should be redirected to the admin dashboard.
+
+<br/>
+
+**CRUD Management**
+
+*As a site administrator I can manage items by creating, viewing, editing, and deleting them so that I can control the content on the website.*
+
+- The site administrator should have access to a management interface where they can see a list of all items.
+- The management interface should have options to create, or add new entries, read, or view existing entries, update, or edit existing items, and delete, or remove existing items.
+- All changes made by the site administrator (create, read, update, delete) should be reflected immediately in the database and on the website.
+
+<br/>
+
+### EPIC | User Interaction
+
+**Site User Polls**
+
+*As a site user I can register and login to access the polls so that I can interact with the site creators and leave feedback by answering questions about the content of the site.*
+
+- Add user registration and login functionality to ensure only authenticated users can answer the polls.
+- Logged-in users can access and participate in site polls to leave feedback on the content.
+- Site users should be notified when finishing the polls.
+
+<br/>
+
 ## Validator Testing
 
 ### HTML
