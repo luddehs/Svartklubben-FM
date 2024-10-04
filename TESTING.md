@@ -26,24 +26,25 @@
 
 ### EPIC | User Navigation
 
-
-
-**Site Navigation**
+#### Site Navigation
 
  *As a site user I can naturally navigate around the site so that I can easily find the content I am looking for.*
 
-- A Navbar should be visible on all pages, allowing the user to navigate to each section of the website.
-- The title should support a link leading the user back to the landing page.
-- There should be an "About" page providing information about the website.
-- The navbar should display the options to register or login.
-- Social media links should be present in a footer on all pages for easy access to the website's social media profiles.
-
+- A Navbar is visible on all pages, allowing the user to navigate to each section of the website.
+- The title supports a link leading the user back to the landing page.
+- The website features an "About" page that offers information about its purpose and background.
+- The navbar displays options to register or log in.
  <details>
 
  <summary>Navigation Bar</summary>
 
 ![Navigation Bar](docs/readme_images/navbar-so.png)
 </details>
+
+<br/>
+
+- Social media links is present the footer on all pages for easy access to the website's social media profiles.
+
 <details>
 
  <summary>Footer</summary>
@@ -53,20 +54,23 @@
 
 <br/>
 
-**Select and View Blogposts**
+#### Select and View Blogposts
 
 *As a site user I can view blog posts containing various content formats so that I can easily discover and listen to curated music selections.*
 
-- Users should be able to click on a blogpost to enlarge it and view the content. The detailed view should include extended descriptions, and any other relevant information.
-- Each blog post must have its own section that includes a title, an image (optional), a short description, and contain a clickable link that redirects the user to the corresponding source. The link should be clearly visible and easy to interact with.
-- The blog posts should be designed to be responsive and look good on various devices, including desktops, tablets, and smartphones. Ensure that the layout adjusts to different screen sizes.
-
+- Users can click on a blog post to enlarge it and view its content. The detailed view includes extended descriptions and other relevant information.
  <details>
 
  <summary>Blog Posts</summary>
 
 ![Blog Posts](docs/readme_images/blog-index.png)
 </details>
+
+<br/>
+
+- Each blog post have its own section that includes a title, an image, a short description, and contains a clickable link that redirects the user to the corresponding source.
+- The blog posts is designed to be responsive and look good on various devices, including desktops, tablets, and smartphones.
+
 <details>
 
  <summary>Post Detail</summary>
@@ -78,47 +82,103 @@
 
 ### EPIC | User Navigation
 
-**Session Management**
+#### Session Management
 
-*As a site administrator I can remain signed in across different pages until I choose to sign out or my session expires so that I can manage the site efficiently without needing to sign in repeatedly.*
+*As a site user I can remain signed in across different pages until I choose to sign out or my session expires so that I can manage the site efficiently without needing to sign in repeatedly.*
 
-- Persistent login should keep the site administrator signed in across different pages until they manually sign out or the session expires.
-- Signing out should securely end the session and redirect the site administrator to a designated sign-out confirmation page or the home page.
-- All user actions must be secure and protect against unauthorized access.
+- The persistent login feature keeps users signed in across different pages until they manually sign out or the session expires.
+<details>
+
+ <summary>Navigation Bar</summary>
+
+![Navigation Bar](docs/readme_images/navbar-si.png)
+</details>
 
 <br/>
 
-**Super User Sign In**
+- Signing out securely ends the session and redirects the user to a designated sign-out confirmation page or the home page.
+<details>
+
+ <summary>Sign Out</summary>
+
+![Sign Out](docs/readme_images/sign-out.png)
+</details>
+
+<br/>
+
+- All user actions are secure and protected against unauthorized access.
+
+<br/>
+
+ #### Super User Sign In
 
 *As a site administrator I can sign in using a secure authentication method so that I can access the admin dashboard and manage the site effectively.*
 
-- The sign-in page should have fields for the administrator to enter their username and password.
-- The sign-in process should validate the administrator's credentials against the user database.
-- After successful sign-in, the administrator should be redirected to the admin dashboard.
+- The sign-in page has fields for the administrator to enter their username and password.
+- The sign-in process validates the administrator's credentials against the user database.
+- After a successful sign-in, the administrator is redirected to the admin dashboard.
+<details>
+
+ <summary>Admin Sign In</summary>
+
+![Admin Sign In](docs/readme_images/admin-si.png)
+</details>
 
 <br/>
 
-**CRUD Management**
+#### CRUD Management
 
 *As a site administrator I can manage items by creating, viewing, editing, and deleting them so that I can control the content on the website.*
 
-- The site administrator should have access to a management interface where they can see a list of all items.
-- The management interface should have options to create, or add new entries, read, or view existing entries, update, or edit existing items, and delete, or remove existing items.
-- All changes made by the site administrator (create, read, update, delete) should be reflected immediately in the database and on the website.
+- The site administrator has access to a management interface where they can view a list of all items.
+- The management interface has options to create or add new entries, read or view existing entries, update or edit existing items, and delete or remove existing items.
+- All changes made by the site administrator (create, read, update, delete) are reflected immediately in the database and on the website.
+<details>
+
+ <summary>Admin Panel</summary>
+
+![Admin Panel](docs/readme_images/admin-panel.png)
+</details>
 
 <br/>
 
 ### EPIC | User Interaction
 
-**Site User Polls**
+#### Site User Polls
 
 *As a site user I can register and login to access the polls so that I can interact with the site creators and leave feedback by answering questions about the content of the site.*
 
-- Add user registration and login functionality to ensure only authenticated users can answer the polls.
-- Logged-in users can access and participate in site polls to leave feedback on the content.
-- Site users should be notified when finishing the polls.
+- User registration and login functionality have been added to ensure that only authenticated users can participate in the polls.
+- Logged-in users can access and participate in site polls.
+<details>
+
+ <summary>Polls Signed In</summary>
+
+![Polls Signed In](docs/readme_images/polls-si.png)
+</details>
 
 <br/>
+
+- Users can vote and then update or delete their choice.
+<details>
+  <summary>Polls CRUD</summary>
+
+  ![Polls CRUD](docs/readme_images/polls-vote.png)  
+  ![Polls CD](docs/readme_images/polls-cd.png)
+</details>
+
+<br/>
+- All user actions are reflected with confirmation messages displayed on the website.
+<details>
+  <summary>Messages</summary>
+
+  ![Message Succes](docs/readme_images/message-success.png)  
+  ![Message Error](docs/readme_images/message-error.png)
+  ![Message Info](docs/readme_images/message-info.png)
+</details>
+
+<br/>
+
 
 ## Validator Testing
 
