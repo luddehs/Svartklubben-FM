@@ -233,8 +233,7 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 
 | Page                  | Performance  | Accessibility | Best Practices  | SEO |
 |-----------------------|:------------:|:-------------:|:---------------:|:---:|
-|                       |              |               |                 |     |
-| Desktop               |              |               |                 |     |
+| **Desktop**           |              |               |                 |     |
 | base.html             |           95 |           100 |             100 | 100 |
 | blog/index.html       |           95 |           100 |             100 | 100 |
 | blog/post_detail.html |          100 |           100 |             100 | 100 |
@@ -246,8 +245,7 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | signup.html           |          100 |            96 |             100 | 100 |
 | login.html            |           99 |            96 |             100 | 100 |
 | logout.html           |           95 |            96 |             100 | 100 |
-|                       |              |               |                 |     |
-| Mobile                |              |               |                 |     |
+| **Mobile**            |              |               |                 |     |
 | base.html             |           76 |           100 |             100 | 100 |
 | blog/index.html       |           76 |           100 |             100 | 100 |
 | blog/post_detail.html |           93 |            96 |             100 | 100 |
@@ -271,44 +269,80 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 ### Site Navigation
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-|                       |            |                                                                    |           |
-|                       |            |                                                                    |           |
-|                       |            |                                                                    |           |
+| **Navbar**            |            |                                                                    |           |
+| Site Name             | Click      | Redirect to blog page                                              | Pass      |
+| Blog Link             | Click      | Redirect to blog page                                              | Pass      |
+| About Link            | Click      | Open about page                                                    | Pass      |
+| Sign Up Link          | Click      | Open sign up page                                                  | Pass      |
+| Sign In Link          | Click      | Open sign in page                                                  | Pass      |
+| Polls Link            | Display    | Only visible if user is signed in                                  | Pass      |
+| Polls Link            | Click      | Open polls page                                                    | Pass      |
+| User Dropdown         | Display    | Status and dropdown only visible if user is signed in              | Pass      |
+| User Dropdown         | Click      | Reveal the sign out link                                           | Pass      |
+| Sign Out Link         | Click      | Open sign out page                                                 | Pass      |
+| All Nav Links         | Hover      | Enlarge text and change color                                      | Pass      |
+| All Nav Links         | Active     | Indicate with bold text                                            | Pass      |
+| **Mobile View**       |            |                                                                    |           |
+| Hamburger Menu        | Responsive | Display when screen size reduces to medium size                    | Pass      |
+| Site Name             | Click      | Redirect to home page                                              | Pass      |
+| Blog Link             | Click      | Redirect to home page                                              | Pass      |
+| About Link            | Click      | Open about page                                                    | Pass      |
+| Sign Up Link          | Click      | Open sign up page                                                  | Pass      |
+| Sign In Link          | Click      | Open sign in page                                                  | Pass      |
+| Polls Link            | Display    | Only visible if user is signed in                                  | Pass      |
+| Polls Link            | Click      | Open polls page                                                    | Pass      |
+| User Dropdown         | Display    | Status and dropdown only visible if user is signed in              | Pass      |
+| User Dropdown         | Click      | Reveal the sign out link                                           | Pass      |
+| Sign Out Link         | Click      | Open sign out page                                                 | Pass      |
+| All Nav Links         | Hover      | Enlarge text and change color                                      | Pass      |
+| All Nav Links         | Active     | Indicate with bold text                                            | Pass      |
+| **Footer**            |            |                                                                    |           |
+| All links             | Click      | Open in new tab and to correct location                            | Pass      |
 
-### Home Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+### Blog Page
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Blog Content          | Display    | Display cards with image, excerpt, publish date and, link          | Pass      |
+| Post Detail Link      | Click      | Open post detail page                                              | Pass      |
+| Blog Post Card        | Hover      | Indicate with animation and transition                             | Pass      |
+| Blog Post Card        | Pagination | Site will paginate 6 blog posts to a page                          | Pass      |
+| Pagination Button     | Display    | Only visible if the page exceeds 6 blog posts                      | Pass      |
+| Pagination Button     | Display    | NEXT or PREV indicate pagination direction                         | Pass      |
+| Pagination Button     | Click      | Move between pages                                                 | Pass      |
+| Pagination Button     | Hover      | Indicate by changing color                                         | Pass      |
 
 ### Blog Detail Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Post Detail Content   | Display    | Display correct image, text and publish date                       | Pass      |
+| Playlist Source Link  | Click      | Open source to playlist                                            | Pass      |
+| Playlist Source Link  | Hover      | Indicate by changing color and decoration                          | Pass      |
 
 ### About Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| About Content         | Display    | Display correct image, title, text, and publish date               | Pass      |
+
+
 
 ### Polls Index Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Polls Index Content   | Display    | Display welcome banner, list of questions, and buttons             | Pass      |
+| Polls Detail Button   | Click      | Open post detail page                                              | Pass      |
+| Polls List Item       | Hover      | Indicate by changing color                                         | Pass      |
+| Polls Detail Buttoon  | Hover      | Indicate by changing color                                         | Pass      |
 
 ### Polls Detail Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Polls Detail Content  | Display    | Display question, choices, and buttons                             | Pass      |
+| Form Check Input      | Click      | Radio button indicate choice                                       | Pass      |
+| Vote Button           | Click      | Radio button indicate choice                                       | Pass      |
+
+
+
+
 
 ### Polls Results Page
 | Element               | Action  | Expected Result                 | Pass/Fail |
