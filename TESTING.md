@@ -168,6 +168,7 @@
 </details>
 
 <br/>
+
 - All user actions are reflected with confirmation messages displayed on the website.
 <details>
   <summary>Messages</summary>
@@ -324,7 +325,6 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | About Content         | Display    | Display correct image, title, text, and publish date               | Pass      |
 
 
-
 ### Polls Index Page
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
@@ -334,36 +334,52 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | Polls Detail Buttoon  | Hover      | Indicate by changing color                                         | Pass      |
 
 ### Polls Detail Page
+| Element               | Action      | Expected Result                                                    | Pass/Fail |
+|-----------------------|-------------|--------------------------------------------------------------------|-----------|
+| Polls Detail Content  | Display     | Display question, choices, and buttons                             | Pass      |
+| Form Check Input      | Click       | Radio button indicate choice                                       | Pass      |
+| Form Check Input      | Leave Empty | If no choice is selected an error message will show when voting    | Pass      |
+| Vote Button           | Click       | If choice is selected, vote is added to database                   | Pass      |
+| Vote Button           | Click       | Redirect to result page                                            | Pass      |
+| Vote Button           | Hover       | Indicate by changing color                                         | Pass      |
+| Go Back Button        | Click       | Redirect to polls index page                                       | Pass      |
+| Go Back Button        | Hover       | Indicate by changing color                                         | Pass      |
+| Polls Detail Content  | Display     | Registred choice, change vote and delete button on return          | Pass      |
+| Change Vote Button    | Click       | If same choice is selected, info message appears on result page    | Pass      |
+| Change Vote Button    | Click       | If vote is changed, redirect to result page and add to database    | Pass      |
+| Change Vote Button    | Hover       | Indicate by changing color                                         | Pass      |
+| Delete Vote Button    | Click       | Redirect user to delete                                            | Pass      |
+| Delete Vote Button    | Hover       | Indicate by changing color                                         | Pass      |
+ 
+### Polls Results Page
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
-| Polls Detail Content  | Display    | Display question, choices, and buttons                             | Pass      |
-| Form Check Input      | Click      | Radio button indicate choice                                       | Pass      |
-| Vote Button           | Click      | Radio button indicate choice                                       | Pass      |
+| Polls Results Content | Display    | Display question, choices, poll results and button                 | Pass      |
+| Go Back Button        | Click      | Redirect to polls index page                                       | Pass      |
 
-
-
-
-
-### Polls Results Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
 
 ### Polls Delete Page
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| Polls Delete Content  | Display    | Display warning, question, choice, and buttons                     | Pass      |
+| Delete Button         | Click      | Remove vote from database and redirect to detail page              | Pass      |
+| Delete Button         | Hover      | Indicate by changing color                                         | Pass      |
+| Cancel Button         | Click      | Redirect to detail page                                            | Pass      |
+| Cancel Button         | Hover      | Indicate by changing color                                         | Pass      |
 
 ### Django All Auth Pages
-| Element               | Action  | Expected Result                 | Pass/Fail |
-|-----------------------|---------|---------------------------------|-----------|
-|                       |         |                                 |           |
-|                       |         |                                 |           |
-|                       |         |                                 |           |
+| Element               | Action             | Expected Result                                            | Pass/Fail |
+|-----------------------|--------------------|------------------------------------------------------------|-----------|
+| **Sign Up**           |                    |                                                            |           |
+| Sign Up Content       | Display            | Banner, textfields, links, and buttons                     | Pass      |
+| Sign In Links         | Click              | Redirect to sign in page                                   | Pass      |
+| Username Field        | Empty              | On submit: form won't submit                               | Pass      |
+| Username Field        | Empty              | Error message displays                                     | Pass      |
+| Username Field        | Correct format     | On submit: form submit                                     | Pass      |
+| Username Field        | Duplicate username | On submit: form won't submit                               | Pass      |
+| Username Field        | Duplicate username | Error message displays                                     | Pass      |
+
+
 
 ## Bugs 
 
