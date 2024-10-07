@@ -10,7 +10,7 @@
 - [Device Testing](#device-testing)
 - [Manual Testing](#manual-testing)
   * [Site Navigation](#site-navigation)
-  * [Home Page](#home-page)
+  * [Blog Page](#blog-page)
   * [Blog Detail Page](#blog-detail-page)
   * [About Page](#about-page)
   * [Polls Index Page](#polls-index-page)
@@ -96,7 +96,7 @@
 
 <br/>
 
-- Signing out securely ends the session and redirects the user to a designated sign-out confirmation page or the home page.
+- Signing out securely ends the session and redirects the user to a designated sign-out confirmation page or the blog page.
 <details>
 
  <summary>Sign Out</summary>
@@ -285,8 +285,8 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | All Nav Links         | Active     | Indicate with bold text                                            | Pass      |
 | **Mobile View**       |            |                                                                    |           |
 | Hamburger Menu        | Responsive | Display when screen size reduces to medium size                    | Pass      |
-| Site Name             | Click      | Redirect to home page                                              | Pass      |
-| Blog Link             | Click      | Redirect to home page                                              | Pass      |
+| Site Name             | Click      | Redirect to blog page                                              | Pass      |
+| Blog Link             | Click      | Redirect to blog page                                              | Pass      |
 | About Link            | Click      | Open about page                                                    | Pass      |
 | Sign Up Link          | Click      | Open sign up page                                                  | Pass      |
 | Sign In Link          | Click      | Open sign in page                                                  | Pass      |
@@ -373,12 +373,48 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 | **Sign Up**           |                    |                                                            |           |
 | Sign Up Content       | Display            | Banner, textfields, links, and buttons                     | Pass      |
 | Sign In Links         | Click              | Redirect to sign in page                                   | Pass      |
-| Username Field        | Empty              | On submit: form won't submit                               | Pass      |
-| Username Field        | Empty              | Error message displays                                     | Pass      |
+| Username Field        | Leave empty        | On submit: form won't submit                               | Pass      |
+| Username Field        | Leave empty        | Error message displays                                     | Pass      |
 | Username Field        | Correct format     | On submit: form submit                                     | Pass      |
 | Username Field        | Duplicate username | On submit: form won't submit                               | Pass      |
 | Username Field        | Duplicate username | Error message displays                                     | Pass      |
-
+| Email Field           | Incorrect format   | On submit: form won't submit                               | Pass      |
+| Email Field           | Incorrect format   | Error message displays                                     | Pass      |
+| Email Field           | Correct format     | On submit: form submit                                     | Pass      |
+| Email Field           | Leave empty        | On submit: form won't submit                               | Pass      |
+| Email Field           | Duplicate email    | On submit: form won't submit                               | Pass      |
+| Email Field           | Duplicate email    | Error message displays                                     | Pass      |
+| Password Field        | Incorrect format   | On submit: form won't submit                               | Pass      |
+| Password Field        | Incorrect format   | Error message displays                                     | Pass      |
+| Password Field        | Passwords don't match | On submit: form won't submit                            | Pass      |
+| Password Field        | Passwords don't match | Error message displays                                  | Pass      |
+| Password Field        | Correct format and passwords match | On submit: form submit                     | Pass      |
+| Sign Up Button        | Click              | If form valid: Form submit                                 | Pass      |
+| Sign Up Button        | Click              | If form valid: Redirect to blog page                       | Pass      |
+| Sign Up Button        | Click              | If form valid: Welcome user message in navbar              | Pass      |
+| Sign Up Button        | Hover              | Indicate by changing color                                 | Pass      |
+| **Sign In**           |                    |                                                            |           |
+| Sign In Content       | Display            | Banner, textfields, links, and buttons                     | Pass      |
+| Sign Up Links         | Click              | Redirect to sign up page                                   | Pass      |
+| Username Field        | Leave empty        | On submit: form won't submit                               | Pass      |
+| Username Field        | Leave empty        | Error message displays                                     | Pass      |
+| Username Field        | Wrong username     | On submit: form won't submit                               | Pass      |
+| Username Field        | Wrong username     | Error message displays                                     | Pass      |
+| Password Field        | Leave empty        | On submit: form won't submit                               | Pass      |
+| Password Field        | Leave empty        | Error message displays                                     | Pass      |
+| Password Field        | Wrong password     | On submit: form won't submit                               | Pass      |
+| Password Field        | Wrong password     | Error message displays                                     | Pass      |
+| Login Button          | Click              | If form valid: Form submit                                 | Pass      |
+| Login Button          | Click              | Redirect to blog page                                      | Pass      |
+| Login Button          | Click              | If form valid: Redirect to blog page                       | Pass      |
+| Login Button          | Click              | If form valid: Welcome user message in navbar              | Pass      |
+| Sign Up Button        | Hover              | Indicate by changing color                                 | Pass      |
+| **Sign Out**          |                    |                                                            |           |
+| Sign Out Content      | Display            | Question, link, and button                                 | Pass      |
+| Go back Link          | Click              | Redirect to blog page                                      | Pass      |
+| Sign Out Button       | Click              | Redirect to blog page                                      | Pass      |
+| Sign Out Button       | Click              | Sign out user and redirect to blog page                    | Pass      |
+| Sign Out Button       | Hover              | Indicate by changing color                                 | Pass      |
 
 
 ## Bugs 
