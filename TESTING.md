@@ -421,5 +421,26 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
 
 ### Fixed Bugs
 
+- #### Fixture Load Error due to Missing Foreign Key
+     - **Bug**: While attempting to load blog post data from a .json file into the database, I encountered an issue where the process failed due to a foreign key constraint violation. The problem set off because the blog posts in the fixture file referenced a user that did not exist in the database. Specifically, the posts were assigned to a user with an ID of 1, but there was no such user in the database at the time.
+     - **Fix**: I discovered that the superuser in the database had an ID of 5, not 1. To resolve the issue, I updated the fixture file to reference the correct user ID (5) for all blog posts, ensuring that the superuser would be the author of all the posts. After making this adjustment, the blog post data loaded successfully without any foreign key violations.
+
+- #### was_published_recently() Returns Incorrect Value for Future Dates
+     - **Bug**: The was_published_recently() method, which determines whether a question was published recently, returned True even if the question's pub_date was set in the future. This caused issues, as the method should only return True for questions published in the past, not for future dates.
+     - **Fix**: To resolve the issue, I modified the was_published_recently() method in the models.py file to ensure it only returns True if the pub_date is in the past. This way, the method correctly identifies whether a question was recently published and ignores future-dated questions.
+
+- #### IntegrityError When Deleting a Question with Related Choices
+     - **Bug**: When attempting to delete a question from the admin panel, I encountered an integrity error. The issue was caused by a foreign key constraint violation between the Choice and ChoiceVote models. Specifically, the ChoiceVote model still referenced choices related to the question being deleted, which prevented the deletion from proceeding.
+     - **Fix**: To fix this issue, I updated the admin.py file to include the ChoiceVote model as an inline in the admin panel, along with the Choice model. This ensured that both Choice and ChoiceVote data were properly managed when performing operations like deletion. Now, when a question is deleted, its associated choices and votes are also handled correctly, preventing the foreign key constraint violation.
+
+- #### Same Vote Bug in Polls Voting System
+     - **Bug**: When users voted in a poll, the system allowed them to repeatedly vote for the same option without removing their previous votes from other choices in the same question. This caused inaccurate vote counts, as users could potentially have votes registered for multiple options in a single question, or increase the count of their current choice with repeated submissions.
+     - **Fix**: To resolve this, I modified the voting logic in the vote view. I introduced a check to ensure that when a user votes for a new choice, their vote is removed from any other choices they had previously voted for within the same question. This change was accomplished by querying all votes related to the question, and if the user had voted for a different choice, their vote was removed and the old choice’s vote count was decremented. Additionally, the logic was updated to properly handle cases where a user’s vote was added for the first time to ensure the vote count is accurate for both the new and old selections.
+
+- #### Irrelevant Login/Logout Messages Displayed on Polls Detail Page
+     - **Bug**: The polls detail page displayed login/logout messages such as "You have signed out" or "Successfully signed in as admin" alongside poll-related messages. This cluttered the page and caused confusion for users who were only interested in voting. These messages appeared because the template rendered all messages passed by Django's messages framework without filtering out those unrelated to the poll.
+     - **Fix**: To fix this issue, I modified the template by adding a condition to filter out irrelevant messages based on their content. Specifically, I excluded the login/logout messages from being displayed by checking the message content and ensuring only poll-related messages were shown. This was done in the for loop where the messages were rendered. Now, the poll detail page only shows relevant voting messages, improving the user experience by keeping the page focused on the voting process.
+
+
 ### Unfixed bugs:
 There are no known unfixed bugs. 

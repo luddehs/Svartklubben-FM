@@ -6,6 +6,9 @@ Svartklubben FM serves as a hub for music enthusiasts, offering frequently updat
 
 The live link can be found here - [svartklubben fm](https://svartklubben-fm-40d7b348ba12.herokuapp.com/)
 
+![Am I Responsive](docs/readme_images/am-i-responsive.png)
+
+## Table of Contents
 - [Svartklubben FM](#svartklubben-fm)
   * [User Experience (UX)](#user-experience-ux)
     + [User Stories](#user-stories)
@@ -369,6 +372,7 @@ To clone this repository, follow these steps:
 - [GitHub](https://github.com/) - Used for version control and project management.
 - [Google Fonts](https://fonts.google.com/) - Used to import and customize fonts on the site.
 - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+- [Jshint](https://jshint.com/) - Used to validate javascript
 - [PEP8 Online](http://pep8online.com/) - Used to validate Python code against PEP8 standards.
 - [Coolors](https://coolors.co/) - Used to create colour palette image in README.
 - [ChatGPT](https://chatgpt.com/) - Used for proofreading the README.md file.
