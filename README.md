@@ -187,7 +187,7 @@ Custom error pages were designed to provide users with more information about th
 
 ### Header
 
-![header](docs/readme_images/navbar.png)
+![header](docs/readme_images/navbar-so.png)
 
 - The svartklubben fm title uses the Righteous font with all text in white to ensure it stands out. Only lowercase letters are used to maintain the thematic consistency. The title is positioned in the top left of the navigation bar and is linked to the home page for ease of navigation for the user.
 
@@ -197,7 +197,7 @@ Custom error pages were designed to provide users with more information about th
 - Upon signing in, the polls page appears in the navigation bar, and users are able to access it.
 - Once a user signs in, the options to sign up or sign in will change to an option to sign out.
 
-![header](docs/readme_images/navbar-2.png)
+![header](docs/readme_images/navbar-si.png)
 
 - The navigation bar is fully responsive and collapses into a hamburger menu on smaller screens.
 - The active page that the user is on is highlighted in brand green.
@@ -277,6 +277,28 @@ Django Allauth was installed to handle the sign up, sign in, and sign out functi
 
 
 ### Polls
+
+The Polls app is available in the navigation bar for signed-in users, allowing them to view questions, vote on different choices, view results, and delete their votes. It supports user authentication, ensuring that each user can vote only once per question. The app provides a simple way to engage users with polls and offers a scalable voting system with a clear separation of concerns across the project.
+
+![header](docs/readme_images/polls-index.png)
+
+The index page lists the most recent questions available for voting, displaying them as links for users to select. Each question is linked to its detail page. If no questions are available, a message will appear indicating that there are no polls.
+
+![header](docs/readme_images/polls-details-1.png)
+
+The detail page displays the question and its available choices, allowing users to select an answer and submit their vote. The choices are presented as radio buttons, with the user's current selection highlighted (if any). Additionally, a "Vote" button is provided for submitting the vote.
+
+![header](docs/readme_images/polls-details-2.png)
+
+It displays two buttons: "Change Vote" or "Delete Vote." If users select "Change Vote," they are redirected to the poll results page. If they choose "Delete Vote," they are redirected to the poll detail page.
+
+![header](docs/readme_images/polls-result.png)
+
+The results page displays the question along with the poll results, showing the total number of votes for each choice. It also includes a "Return to the list of questions" link, allowing users to navigate back to the index page.
+
+![header](docs/readme_images/polls-delete.png)
+
+The delete page provides a confirmation prompt before removing the user’s vote. If they choose "Delete Vote," they are redirected to the poll detail page.
 
 
 ### Future Features
