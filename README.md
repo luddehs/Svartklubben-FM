@@ -2,7 +2,7 @@
 
 Welcome to Svartklubben FM, a music blog dedicated to promoting music discovery and enhancing your listening experience. The app is targeted towards users who enjoy a wide range of music genres, whether you're looking for playlists curated to fit a specific mood or eager to discover tunes beyond the mainstream charts.
 
-Svartklubben FM serves as a hub for music enthusiasts, offering frequently updated blogposts and the ability to subscribe to playlists, ensuring you always have music to enjoy.
+Svartklubben FM serves as a hub for music enthusiasts, offering frequently updated blog posts and the ability to subscribe to playlists, ensuring you always have music to enjoy. Sign up to access user polls and stay tuned for future features.
 
 The live link can be found here - [svartklubben fm](https://svartklubben-fm-40d7b348ba12.herokuapp.com/)
 
@@ -70,14 +70,14 @@ The following user stories were labeled as "Won't Have" or "Could Have" on the G
 
 ### Design
 
-The design of svartklubben fm is intentionally simple and clean. This minimalist approach aligns with our goal of fostering curiosity and theme connection as visitors explore new music. By eliminating unnecessary distractions, the aim is to create a focused and immersive experience for music discovery.
+The design of svartklubben fm is intentionally simple and clean. This minimalist approach aligns with our goal to encourage curiosity and theme connection as visitors explore new music. By eliminating unnecessary distractions, the aim is to create a focused and immersive experience for music discovery.
 
 #### Colour Scheme
 Colour palette from Coolors
 
 ![Colour Palette](docs/readme_images/colour-scheme.png)
 
-The website's color scheme primarily features dark gray and white, complemented by red and green buttons and links. This palette is inspired by the theme of a lighthouse. The dark gray and white symbolize the lighthouse structure, while the red and green represent the colors of the light emitted from the lighthouse. This cohesive color scheme enhances the thematic experience of the site.
+The website's color scheme primarily features dark gray, a lighter shade of gray and white, complemented by red and green buttons and links. This palette is inspired by the theme of a lighthouse. The dark gray and white symbolize the lighthouse structure, while the red and green represent the colors of the light emitted from the lighthouse. This cohesive color scheme enhances the thematic experience of the site.
 
 #### Imagery
 
@@ -158,9 +158,6 @@ The diagram illustrates the relationships:
 
 User authentication is handled by Django AllAuth, with a custom polls model enabling user participation in polls.
 
-
-
-
 ## Testing
 Testing and results can be found [here](/TESTING.md)
 
@@ -179,8 +176,8 @@ Testing and results can be found [here](/TESTING.md)
 ### Custom error pages
 Custom error pages were designed to provide users with more information about the error and buttons to guide them back to the site.
 - 400 Bad Request: svartklubben fm is unable to process this request.
-- 403 Forbidden: It appears you're trying to access restricted content. Please log out and sign in with the correct account.
-- 404 Not Found: The page you're looking for doesn't exist.
+- 403 Page Forbidden: Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
+- 404 Page Not Found: The page you're looking for doesn't exist. Return to the home page below.
 - 500 Server Error: svartklubben fm is currently unable to handle this request.
 
 ## Features
@@ -191,25 +188,31 @@ Custom error pages were designed to provide users with more information about th
 
 - The svartklubben fm title uses the Righteous font with all text in white to ensure it stands out. Only lowercase letters are used to maintain the thematic consistency. The title is positioned in the top left of the navigation bar and is linked to the home page for ease of navigation for the user.
 
-**Navigation Bar**
+#### Navigation Bar
 
 - The navigation bar is located at the top of every page, providing links to all other sections of the site.
 - Upon signing in, the polls page appears in the navigation bar, and users are able to access it.
-- Once a user signs in, the options to sign up or sign in will change to an option to sign out.
+- Once a user signs in, the options to sign up or sign in will change to a welcome user message which contains a dropdown menu with the option to sign out.
 
 ![header](docs/readme_images/navbar-si.png)
 
 - The navigation bar is fully responsive and collapses into a hamburger menu on smaller screens.
-- The active page that the user is on is highlighted in brand green.
-- Hovering over the links will lighten the font color and underline the link.
+- The active page that the user is oni s highlighted in brand green.
+- Hovering over the links will change the font color and animate the text.
+
+<br/>
 
 ### Footer
 
 ![header](docs/readme_images/footer.png)
 
+- The footer is located at the bottom of every page.
 - The footer section includes links to Facebook, Instagram, YouTube, Spotify, SoundCloud, and Apple Music.
 - Clicking these links opens them in a separate browser tab, ensuring users are not navigated away from the site.
+- The icons will be highlighted in brand green and animated when hovered over.
 - A copyright notice stating "2024 Svartklubben FM" is displayed.
+
+<br/>
 
 ### Blog Page
 
@@ -217,89 +220,145 @@ Custom error pages were designed to provide users with more information about th
 
 The blog page displays a list of blog posts in a responsive grid layout. Each post is presented with a featured image, title, excerpt, and publication date. Below are the details of the implementation:
 
-**Layout and Structure**
+#### Layout and Structure
 - Container: The entire content is wrapped within a container-fluid for full-width responsiveness.
 - Row and Column Setup: The layout uses Bootstrap's grid system with a row to contain the posts and individual columns (col-md-4) for each post.
 - The layout ensures that after every three posts, a new row starts to maintain alignment.
 
-**Blog Post Display**
+#### Blog Post Display
 - Post Iteration: Each post is rendered using a loop, with individual posts showcased within a card component.
 - Featured Image: Each blog post features an image. If no image is uploaded, a default placeholder image is shown.
 - Content Label: Categorizes blog posts by different content formats.
-- Title: The blog post title is presented as a clickable link that directs users to the post's detailed page.
+- Card: Each blog post card is presented as a clickable link that is highlighted and animated when hovered over, directing users to the post's detailed page.
 - Excerpt: A concise summary of the post’s content is displayed.
 - Publication Date: The date when the post was published is shown below the excerpt.
 
-**Pagination**
+#### Pagination
 - If the content is paginated, navigation buttons (PREV and NEXT) are provided to move between pages.
 - The navigation buttons are centered and styled for ease of use.
+- When hovering over the buttons, the background color will change.
 
-### Blog Posts
+<br/>
+
+### Blog Posts Page
 
 ![header](docs/readme_images/post-detail.png)
 
-The blog details page showcases a single blog post, including its title, creation date, and featured image. If a featured image is not provided, a placeholder image will be displayed. Each post is intended to include text and a narrative about the playlist featured in the blog. Currently, it only includes a Spotify link to the playlist.
+The blog details page is designed to present a single blog post, displaying the content and a direct link to the featured playlist.
+The blog details page features a card interface with the following key elements:
+- A title, publish date, and featured image for each blog post.
+- If no featured image is provided, a placeholder image will be displayed instead.
+- The image is centered above the text with a light shadow to make it stand out, serving both as a poster for the blog post and the playlist cover on Spotify.
+- The title, publish date, blog text, and links are centered below the image within the card.
+- Each post is intended to include text and a narrative about the playlist featured in the blog. Currently, it only includes a Spotify link to the playlist.
+
+<br/>
 
 ### About Page
 
 ![header](docs/readme_images/about.png)
 
-The About page layout and content aim to communicate the mission and background of svartklubben fm, offering visitors a personal connection and insight into the blog’s purpose. The page features a compelling title, a narrative that describes the site’s inspiration and mission, and the date of the last update. It also includes an image of the Svartklubben lighthouse, adding a personal touch. If a profile image is not available, a default placeholder image is displayed.
+The About page layout and content aim to communicate the mission and background of svartklubben fm, offering visitors a personal connection and insight into the blog’s purpose. The About page features a card interface with the following key elements:
+- A compelling title that communicates the purpose of Svartklubben FM.
+- A narrative that describes the inspiration behind the site and its mission.
+- The date of the last update to keep content fresh and relevant.
+- An image of the Svartklubben lighthouse, adding a personal and symbolic touch to the page.
+- A default placeholder image is displayed if a profile image is not available.
 
-### Sign up
+<br/>
+
+### Sign Up Page
 
 ![header](docs/readme_images/sign-up.png)
 
-The sign up page provides an interface for users to join svartklubben fm. Key elements of the page include:
+The sign up page provides a card interface for users to join svartklubben fm. Key elements of the page include:
 - Introduction: A welcoming message invites new users to join the community and provides a link for existing members to sign in.
 - Sign-Up Form: To sign up, users need to complete the form with a username, email, and password that follows the stated criteria 
 - After entering valid information, users can submit the registration form by clicking the "Sign Up" button.
+- At the bottom of the card, there's an additional link that directs existing members to sign in.
 
-### Sign in
+<br/>
+
+### Sign In Page
 
 ![header](docs/readme_images/sign-in.png)
 
-The sign in page provides an interface for users to access their accounts. Key features include:
+The sign in page provides a card interface for users to access their accounts. Key features include:
 - Introduction: Welcomes returning users and provides a link for new users to sign up if they haven't joined yet.
 - Sign-In Form: Users can log in by entering their username and password.
 - Click the "Sign In" button after entering valid information to log in.
-- The "Remember Me" checkbox is optional and allows users to stay signed in on future visits.
+- At the bottom of the card, there's an additional link that directs new users to sign up.
+
+<br/>
 
 
-### Sign out
+### Sign Out Page
 
 ![header](docs/readme_images/sign-out.png)
 
-The Sign-Out page offers an interface for users to securely log out of their accounts.
+The Sign-Out page offers a card interface for users to securely log out of their accounts.
+- Django Allauth was installed to handle the sign up, sign in, and sign out functionalities.
+- Clicking the "Sign Out" button will immediately log the user out.
+- At the bottom of the card, there's a link that allows users to cancel the sign-up process and return to the home page.
 
+<br/>
 
-Django Allauth was installed to handle the sign up, sign in, and sign out functionalities.
-
-
-### Polls
+### Polls App
 
 The Polls app is available in the navigation bar for signed-in users, allowing them to view questions, vote on different choices, view results, and delete their votes. It supports user authentication, ensuring that each user can vote only once per question. The app provides a simple way to engage users with polls and offers a scalable voting system with a clear separation of concerns across the project.
 
+#### Polls Index Page
+
 ![header](docs/readme_images/polls-index.png)
 
-The index page lists the most recent questions available for voting, displaying them as links for users to select. Each question is linked to its detail page. If no questions are available, a message will appear indicating that there are no polls.
+The polls index page features a welcome banner and a card interface with the following key elements:
+- A title and brief descriptive text.
+- A list of the most recent questions available for voting. If no questions are available, a message will be shown, indicating that there are currently no polls.
+- The "Answer" button redirects users to the blog detail page.
+
+<br/>
+
+#### Polls Detail Page
 
 ![header](docs/readme_images/polls-details-1.png)
 
-The detail page displays the question and its available choices, allowing users to select an answer and submit their vote. The choices are presented as radio buttons, with the user's current selection highlighted (if any). Additionally, a "Vote" button is provided for submitting the vote.
+The polls detail page features a card interface with the following key elements:
+- The question is displayed along with its available choices. 
+- Choices are presented as radio buttons, with the user's current selection (if any) highlighted, allowing them to choose an option and submit their vote.
+- A "Vote" button enables users to submit their vote.
+- A "Go back" button is available, allowing users to return to the blog index page.
+
+<br/>
 
 ![header](docs/readme_images/polls-details-2.png)
 
-It displays two buttons: "Change Vote" or "Delete Vote." If users select "Change Vote," they are redirected to the poll results page. If they choose "Delete Vote," they are redirected to the poll detail page.
+When a user returns to the question, two buttons appear: 
+- "Change Vote": If users select a new choice and click "Change Vote," they are redirected to the poll results page, and their vote is updated in the database.
+- "Change Vote" (No New Selection): If users don't select a new choice and click "Change Vote," they are redirected to the poll results page, and an informational message will appear saying, "You have already voted for this choice."
+- "Delete Vote": If users select "Delete Vote," they are redirected to a confirmation page before their vote is removed from the database.
+
+<br/>
+
+#### Polls Results Page
 
 ![header](docs/readme_images/polls-result.png)
 
-The results page displays the question along with the poll results, showing the total number of votes for each choice. It also includes a "Return to the list of questions" link, allowing users to navigate back to the index page.
+The polls results page features a card interface with the following key elements:
+- The question is displayed at the top, followed by the poll results, which show the total number of votes for each choice.
+- A "Go Back" button is provided, directing users to the polls index page for further navigation.
+
+<br/>
+
+#### Polls Delete Page
 
 ![header](docs/readme_images/polls-delete.png)
 
-The delete page provides a confirmation prompt before removing the user’s vote. If they choose "Delete Vote," they are redirected to the poll detail page.
+The polls delete page features a card interface with the following key elements:
+- A confirmation prompt is displayed, asking the user to confirm before their vote is removed.
+- Clicking the "Delete Vote" button redirects the user to the poll detail page and displays a success message: "Your vote has been successfully deleted."
+- Clicking the "Cancel" button redirects the user back to the poll detail page without deleting the vote.
 
+<br/>
 
 ### Future Features
 
