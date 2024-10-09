@@ -441,6 +441,9 @@ Lighthouse validation was run on all pages (for both mobile and desktop versions
      - **Bug**: The polls detail page displayed login/logout messages such as "You have signed out" or "Successfully signed in as admin" alongside poll-related messages. This cluttered the page and caused confusion for users who were only interested in voting. These messages appeared because the template rendered all messages passed by Django's messages framework without filtering out those unrelated to the poll.
      - **Fix**: To fix this issue, I modified the template by adding a condition to filter out irrelevant messages based on their content. Specifically, I excluded the login/logout messages from being displayed by checking the message content and ensuring only poll-related messages were shown. This was done in the for loop where the messages were rendered. Now, the poll detail page only shows relevant voting messages, improving the user experience by keeping the page focused on the voting process.
 
+- #### MultipleObjectsReturned Error when User Changes Vote
+     - **Bug**: When a user attempted to change their vote in the polls app, a MultipleObjectsReturned error was raised. The error occurred because the application was using get() to retrieve a ChoiceVote object, but there were multiple ChoiceVote objects returned due to the possibility of a user having multiple votes for different choices in the same question. This caused the view to fail whenever more than one ChoiceVote was returned.
+     - **Fix**: The get() method was replaced with filter().first() in the DetailView to safely retrieve the user's vote without raising the error. The voting logic was updated to ensure that only one vote per user per question exists by removing any previous votes before adding a new one.
 
 ### Unfixed bugs:
 There are no known unfixed bugs. 
