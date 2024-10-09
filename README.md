@@ -27,11 +27,11 @@ The live link can be found here - [svartklubben fm](https://svartklubben-fm-40d7
   * [Features](#features)
     + [Header](#header)
     + [Footer](#footer)
-    + [Home Page](#home-page)
+    + [Blog Page](#blog-page)
     + [About Page](#about-page)
-    + [Polls](#polls)
+    + [User Polls](#user-polls)
     + [Future Features](#future-features)
-  * [Deployment - Heroku](#deployment---heroku)
+  * [Deployment](#deployment)
   * [Forking this repository](#forking-this-repository)
   * [Cloning this repository](#cloning-this-repository)
   * [Languages](#languages)
@@ -132,13 +132,13 @@ The four Epics listed above were documented as Milestones within the GitHub proj
 ## Data Model
 This Django project follows Object-Oriented Programming principles and utilizes Class-Based Generic Views. It includes three main apps: Blog, About, and Polls. Each app defines models that map to database tables and establish key relationships.
 
-#### Blog
+#### Blog App
 The Post model represents blog posts, capturing content, metadata, and status. It has a many-to-one relationship with the User model through the author field, allowing multiple posts per user.
 
-#### About
+#### About App
 The About model manages content for the "About" page. It stands alone with fields for the title, content, profile image, and an updated timestamp, having no direct relationships with other models.
 
-#### Polls
+#### Polls App
 The Question model represents poll questions, while the Choice model represents possible answers. The ChoiceVote model tracks user votes, establishing a many-to-many relationship between User and Choice.
 
 <details>
@@ -303,7 +303,7 @@ The Sign-Out page offers a card interface for users to securely log out of their
 
 <br/>
 
-### Polls App
+### User Polls
 
 The Polls app is available in the navigation bar for signed-in users, allowing them to view questions, vote on different choices, view results, and delete their votes. It supports user authentication, ensuring that each user can vote only once per question. The app provides a simple way to engage users with polls and offers a scalable voting system with a clear separation of concerns across the project.
 
@@ -368,24 +368,29 @@ The following user stories were labeled as "Won't Have" or "Could Have" on the G
 - As a site user I can support the site by giving a small amount using a service of my choice so that I can contribute to the upkeep and improvement of the site.
 
 Other potential features to include:
+- Related posts on the blog post page, displaying content based on categories or tags.
+- A voting feature for blog posts, enabling users to upvote or downvote content.
+- Enhanced user profiles with personalized settings and preferences.
+- Share on social media links on the blog post page for easy content sharing.
 
+<br/>
 
 ## Deployment
 
 To deploy this page to Heroku from its GitHub repository, follow these steps:
 
-### Create the Heroku App:
+#### Create the Heroku App:
 1. Log in to [Heroku](https://dashboard.heroku.com/apps) or create an account.
 2. Click the "New" button in the top right corner of the main page and select "Create New App" from the drop-down menu.
 3. Enter a unique and descriptive name for your app.
 4. Select your region.
 5. Click the "Create App" button
 
-### Attach the Postgres Database:
+#### Attach the Postgres Database:
 1. Go to the Resources tab and, under add-ons, type in "Postgres" and select the Heroku Postgres option.
 2. Copy the DATABASE_URL found in the Config Vars section of the Settings tab.
 
-### Prepare the Environment and settings.py File:
+#### Prepare the Environment and settings.py File:
 1. In your GitPod workspace, create a file named env.py in the root directory.
 2. Add the DATABASE_URL value and a SECRET_KEY value of your choice to the env.py file.
 3. Update the settings.py file to import the env.py file and include the SECRET_KEY and DATABASE_URL paths.
@@ -398,19 +403,19 @@ To deploy this page to Heroku from its GitHub repository, follow these steps:
 10. Set the templates directory to TEMPLATES_DIR.
 11. Add your Heroku app to the ALLOWED_HOSTS list with the format ['your-app-name.herokuapp.com', 'localhost'].
 
-### Create Files / Directories:
+#### Create Files / Directories:
 1. Create a requirements.txt file.
 2. Create three directories in the root directory: media, storage, and templates.
 3. Create a Procfile in the root directory with the following content: web: gunicorn your-project-name.wsgi.
 
-### Update Heroku Config Vars:
+#### Update Heroku Config Vars:
 Add the following Config Vars in Heroku:
 - SECRET_KEY value
 - CLOUDINARY_URL
 - PORT = 8000
 - DISABLE_COLLECTSTATIC = 1
 
-### Deploy
+#### Deploy
 1. Ensure DEBUG is set to False in Django settings.
 2. Go to the deploy tab on Heroku, connect to GitHub, and then to the required repository.
 3. Scroll to the bottom of the deploy page and either click "Enable Automatic Deploys" for automatic deploys or "Deploy Branch" to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
@@ -418,11 +423,15 @@ Add the following Config Vars in Heroku:
 
 The site is now live and operational.
 
+<br/>
+
 ## Forking this repository
 To fork this repository, follow these steps:
 1. Locate the repository at this link: [svartklubben fm](https://github.com/luddehs/svartklubben-fm).
 2. At the top of the repository, on the right side of the page, select "Fork".
 3. A copy of the repository will be created.
+
+<br/>
 
 ## Cloning this repository
 To clone this repository, follow these steps: 
@@ -433,12 +442,16 @@ To clone this repository, follow these steps:
 5. Type **git clone**, and then paste the URL copied from GitHub.
 6. Type **Enter** to create the local clone.
 
+<br/>
+
 ## Languages
 
 - Python
 - Javascript
 - HTML
 - CSS
+
+<br/>
 
 ## Frameworks - Libraries - Programs Used
 
@@ -461,6 +474,8 @@ To clone this repository, follow these steps:
 - [Cloudinary](https://cloudinary.com/): The image hosting service used for uploading and managing images.
 - [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.0/getting-started/introduction/): The CSS framework used for responsive design and styling.
 
+<br/>
+
 ## Credits
 - [Django Docs](https://docs.djangoproject.com/en/5.0/)
 - [Bootstrap 5.0.1 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
@@ -469,6 +484,8 @@ To clone this repository, follow these steps:
 - [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
 - [Django Docs - Polls App](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
 - [MDB - Boostrap Survey Form](https://mdbootstrap.com/docs/standard/extended/bootstrap-survey-form/)
+
+<br/>
 
 ## Acknowledgments
 
